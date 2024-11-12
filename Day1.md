@@ -22,6 +22,11 @@ print("****")
 print("*****")
 ```
 Output:
+*
+**
+***
+****
+*****
 
 ** Modified triangle
 ```python
@@ -32,6 +37,11 @@ print("*"*4)
 print("*"*5)
 ```
 Output:
+*
+**
+***
+****
+*****
 
 print("*"*2): This is taking * as a string and will copy it will the mentioned number. This will happen as python wont be consider * as an operator . Instead it is considering it as a string. We can perform various function on string.
 
