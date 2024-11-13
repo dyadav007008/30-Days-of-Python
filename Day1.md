@@ -22,11 +22,13 @@ print("****")
 print("*****")
 ```
 Output:
-*
-**
-***
-****
-*****
+
+
+<br/>*<br/>
+** <br/>
+*** <br/>
+**** <br/>
+***** <br/>
 
 ** Modified triangle
 ```python
@@ -37,11 +39,11 @@ print("*"*4)
 print("*"*5)
 ```
 Output:
-*
-**
-***
-****
-*****
+<br/>*<br/>
+** <br/>
+*** <br/>
+**** <br/>
+***** <br/>
 
 print("*"*2): This is taking * as a string and will copy it will the mentioned number. This will happen as python wont be consider * as an operator . Instead it is considering it as a string. We can perform various function on string.
 
@@ -88,7 +90,7 @@ age = input("Enter your age : ")
 print("You are " , age*12 , " months old")
 ```
 Output:
-Enter your age :  30
+Enter your age :  30 <br/>
 You are  303030303030303030303030  months old
 
 **Note: Input command will always take input from user in String. If we have to take input in other data type. We have to convert string to desired data type. This conversion is known as TYPE Casting.
@@ -116,10 +118,10 @@ print (type(string))
 print (type(boolean))
 ```
 
-<class 'int'>
-<class 'float'>
-<class 'str'>
-<class 'bool'>
+<class 'int'>  <br/>
+<class 'float'> <br/>
+<class 'str'> <br/>
+<class 'bool'> <br/>
 
 ## Type Casting in python:
 
@@ -131,10 +133,10 @@ print(str(a))
 print(bool(a))
 ```
 Output:
-1
-1.0
-1
-True
+<br/>1<br/>
+1.0<br/>
+1<br/>
+True<br/>
 
 
 ## Data types in python: 
@@ -297,3 +299,54 @@ Exponential =  279936
 | or                                           | OR                                                    |
 
 
+## String Operations
+
+String Data are immutable which means it can't be modified. We use '' or "" for string
+
+```python
+name = "Deepak"
+name_1 = 'Deepak'
+print(name, ' ',name_1)
+```
+Output: Deepak   Deepak
+
+**Escape Character \
+
+```python
+print('I don't know')
+```
+Output: SyntaxError: unterminated string literal (detected at line 1)
+
+This happens coz we already have used ' twice and an extra means an error. There are 2 ways to fix this. One to either use "I don't Know" or to use 'I don\'t know'
+The second one escapes the special character.
+
+
+### String Concatenation:
+
+```python
+first_name = input("Enter your first Name?")
+Last_name = input("Enter your last Name?")
+Full_name = 'Welcome to our Coffee Shop: ' + first_name + ' ' + Last_name
+print(Full_name)
+```
+Output:
+
+ <br/>Enter your first Name? Deepak  <br/>
+Enter your last Name? Kumar  <br/>
+Welcome to our Coffee Shop:  Deepak   Kumar
+
+** TO calculate length of the string, we use len() function
+```python
+len(Full_name)
+```
+output: 40
+
+### Indexing In Strings <br>
+- Forward indexing starts with 0
+- Reverse indexing starts with the last character as -1 in a python string
+- Strings are immutable which, means they cannot be changed once created.
+- Strings can be modified by slicing a part of it and concatenating with another
+
+```Python
+string = "We may encounter many defeats, but we must not be defeated.— Maya Angelou"
+```
