@@ -1,23 +1,22 @@
+
 # Data Structures in Python
+- In Python, data structures are ways of organizing and storing data so that they can be accessed and manipulated efficiently. 
+- Python provides several built-in data structures, each designed for specific use cases.
+- A data structure is nothing but a collection of data values.
+  
+## Overview of Python Data Structures
+- List: An ordered, mutable (changeable) collection that allows duplicate elements.
+- Tuple: An ordered, immutable collection that allows duplicate elements.
+- Set: An unordered, mutable collection that does not allow duplicate elements.
+- Dictionary: An unordered, mutable collection of key-value pairs, where keys are unique and immutable.
 
-## Topics Covered : List, Tuple, Set and Dictionary
-
-### Short Introduction
-
-- **List** is a collection which is ordered and changeable. Allows duplicate members.
-- **Tuple** is a collection which is ordered and unchangeable. Allows duplicate members.
-- **Set** is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
-- **Dictionary** is a collection which is ordered** and changeable. No duplicate members.
-
-
- ### A data structure is nothing but a collection of data values.
 
  ## List
 
-- Lists are used to store multiple items in a single variable.
-- Lists are an ordered sequnce of mixed data types.
-- Lists are written as comma-separated elements within square brackets
-
+- A list is an ordered collection of items, which can be of mixed data types.
+- Lists are mutable, meaning you can change their content after they are created.
+- Lists allow duplicate values.
+- Lists are indexed, which means each item in a list has a position.
 
 ```python
 list_1 = ['Deepak', 30, 'Uttar Pradesh']
@@ -37,6 +36,21 @@ print(type(list_1))
 
 ![image](https://github.com/user-attachments/assets/2fa989c7-a312-46b8-8391-f48db7ec5a0e)
 
+
+### Key Operations:
+- Indexing: Access elements using their position.
+- Slicing: Access a range of elements.
+- Mutability: Lists can be changed by adding, removing, or modifying elements.
+- Concatenation: Combine two or more lists using the + operator.
+- Methods: append(), extend(), insert(), remove(), pop(), sort(), etc.
+
+### Methods:
+- append(): Adds an element at the end of the list.
+- extend(): Adds all elements of an iterable to the list.
+- insert(): Adds an element at a specific index.
+- remove(): Removes the first occurrence of an element.
+- pop(): Removes and returns an element at a given index.
+- sort(): Sorts the list in ascending order.
 
 #### Ordered
 - When we say that lists are ordered, it means that the items have a defined order, and that order will not change.
@@ -328,6 +342,13 @@ print(A,B)
 - Tuples allows duplicate values.
 - Tuples are similar to lists in almost of their functionalities, but there is one significant difference in both the data structures lists are mutable and tuples are not. 
 - Tuples are written as commans separated within paranthesis.
+- Because they are immutable, tuples are faster and use less memory than lists.
+
+## Key Operations:
+- Indexing: Access elements using their position (same as in lists).
+- Slicing: Access a range of elements.
+- Concatenation: Combine two or more tuples using the + operator.
+- Immutability: Once created, the values in a tuple cannot be changed.
 
 
 Syntax:
@@ -526,6 +547,11 @@ Output: ['__add__',
  - Sets does not allow Duplicates
  - A set is a collection which is unordered, unchangeable*, and unindexed.
 
+### Key Operations:
+- Adding elements: Use the add() method.
+- Removing elements: Use the remove() method or the discard() method.
+- Set operations: Union (|), Intersection (&), Difference (-), Symmetric Difference (^).
+
 Syntax:
 myset = {"apple", "banana", "cherry"}
 
@@ -621,4 +647,105 @@ print(a.difference(b))
 - Symmetric Difference: Items that are either in A or in B but wont be in A and B
 
 print(a^b) # symmetric difference
+
+## Dictionaries:
+
+- A dictionary stores elements as keys and value pair.
+- The keys are like index, these are unique and immutable.
+- The value are the object that contain information.
+- Values are accessed using their keys.
+- Each key is followed by a value separated by colon.
+- The value can be immutable. mutable and duplicates.
+- Each key and value are separated by comma followed by curly braces.
+
+### Key Operations:
+- Accessing values: Access values using their keys.
+- Adding key-value pairs: Add new key-value pairs to the dictionary.
+- Modifying values: Change the value associated with a key.
+- Removing elements: Use del to remove key-value pairs or pop() to remove and return a value.
+- Keys and Values: Use .keys() and .values() to access keys and values respectively.
+
+### Dictionary Methods:
+- keys(): Returns the keys in a dictionary.
+- values(): Returns the values in a dictionary.
+- items(): Returns key-value pairs as tuples.
+- get(): Access value by key without raising an error if key doesn't exist.
+
+```python
+# dictionary
+p = {"India":"INR","USA":"USD","UK":"Euro","Japan":"Yen", 'Usa': ['$']}
+p
+(p["India"],p["Japan"])
+ ```
+Output: ('INR', 'Yen')
+
+##### Replace value of a key
+```python
+# Replace value of a key in dictionary
+p["USA"] = "$"
+p
+```
+Output: {'India': 'INR', 'USA': '$', 'UK': 'Euro', 'Japan': 'Yen', 'Usa': ['$']}
+
+##### Inserting a new key pair
+
+```python
+# insert a new key pair
+p["Korea"] = "WON"
+p
+```
+Output:  {'India': 'INR',
+ 'USA': '$',
+ 'UK': 'Euro',
+ 'Japan': 'Yen',
+ 'Usa': ['$'],
+ 'Korea': 'WON'}
+
+##### Deleting a key pair
+
+```python
+# delete a new key pair
+del p["Usa"]
+p
+```
+Output: {'India': 'INR', 'USA': '$', 'UK': 'Euro', 'Japan': 'Yen', 'Korea': 'WON'}
+
+##### Sorting a Dictionary
+```python
+sorted(p)
+```
+
+Output: ['India', 'Japan', 'Korea', 'UK', 'USA']
+
+##### Extract all the values:
+```python
+p.values()
+```
+Output: dict_values(['INR', '$', 'Euro', 'Yen', 'WON'])
+
+##### Extract all keys:
+```python
+p.keys()
+```
+Output: dict_keys(['India', 'USA', 'UK', 'Japan', 'Korea'])
+
+
+##### Update Method:
+
+```python
+# update method
+p.update({'USA':'USD'})
+p
+```
+Output: {'India': 'INR', 'USA': 'USD', 'UK': 'Euro', 'Japan': 'Yen', 'Korea': 'WON'}
+
+## Summary:
+- List: Ordered, mutable, allows duplicates.
+- Tuple: Ordered, immutable, allows duplicates.
+- Set: Unordered, mutable, no duplicates.
+- Dictionary: Unordered, mutable, key-value pairs, keys are unique.
+
+
+
+
 
