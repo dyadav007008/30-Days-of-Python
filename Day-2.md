@@ -333,8 +333,292 @@ print(A,B)
 Syntax:
 mytuple = ("apple", "banana", "cherry")
 
+-To get the datatype
+
+type(mytuple)
+
+- we can define tuple without paranthesis
+
+mytuple = 1,2,3
+type(mytuple)
+
+- Define a single value tuple
+  single_value_tuple = 1,
+
+
+### indexing in tuple
+
+```python
+tuple = ('Deepak',23,1994)
+tuple[0]
+tuple[1]
+tuple[-1]
+tuple[0:-2]
+```
+![image](https://github.com/user-attachments/assets/760f3631-1048-466f-90bf-7c33d6d6f07e)
+
+
+### slicing
+
+```sql
+tuple = ('Deepak',23,1994,23,56,34,123,567)
+tuple[0:-2:2]
+```
+Output: ('Deepak', 1994, 56)
+
+### length
+
+- to get the length of tuple
+```python
+tuple = ('Deepak',23,1994,23,56,34,123,567)
+len(tuple)
+```
+
+### Concatinating tuples
+
+# concatinating tuple
+
+```python
+a = (1,2,3)
+b = (4,5,6)
+c = a + b
+print(c)
+```
+
+### sum(), max(), min() in tuple
+
+- Tuple should only contain integer values to perform these functions otherwise it will throw an error. 
+
+```python
+a = (1,2,3)
+b = (4,5,6)
+c = a + b
+print(c)
+
+max(c)
+min(c)
+sum(c)
+```
+
+
+![image](https://github.com/user-attachments/assets/39918746-abde-4aa2-97e0-8fc396117706)
+
+
+### Immutability of Tuples:
+
+```python
+
+a = (1,2,3)
+b = (4,5,6)
+c = a + b
+print(c)
+# lets try to change the 3rd element
+c
+c[3] = 7,
+```
+- This throws an error 'tuple' object does not support item assignment. As lists are immutable.
+
+To overcome this issue, we have to create a new tuple with the change required. To do that,
+
+```python
+a = (1,2,3)
+b = (4,5,6)
+c = a + b
+print(c)
+# lets try to change the 3rd element
+c
+c[3] = 7,
+
+d = c[0:3] + (7,) + c[4:]
+```
+
+- old Tuple: (1, 2, 3, 4, 5, 6)
+- new Tuple: (1, 2, 3, 7, 5, 6)
+
+### Sorting in tuple
+
+
+```python
+# Sorting in tuple
+f = (34,52,56,21,23,68,9,0,4,232,566)
+k = sorted(f)
+type(k)
+```
+This will return list even though we have sorted a tuple. To get back to tuple , we have to type cast it again 
+
+```python
+f = (34, 52, 56, 21, 23, 68, 9, 0, 4, 232, 566)
+g = sorted(f)  # Sort the tuplee and get a list
+h = tuple(g)   # Convert the sorted list back to a tuplee
+print(h)
+```
+type(h)
+Output: (0, 4, 9, 21, 23, 34, 52, 56, 68, 232, 566)
+tuple
+
+### Neted Tuple
+
+```python
+a = (4,2,5,(0,5,4),(8,5,2,1),(6,1,5,2))
+a[3][1]
+```
+Output: 5
+
+# Packing and unpacking in tuple
+
+```python
+t = (1,2,3,4) #packing
+(a,b,c,d) = t #unpacking
+b
+```
+Output: 2
+
+### dir() - to view the attribute or method of an object
+
+```python
+m = () # empty typle
+dir(m)
+```
+
+Output: ['__add__',
+ '__class__',
+ '__class_getitem__',
+ '__contains__',
+ '__delattr__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getitem__',
+ '__getnewargs__',
+ '__getstate__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__iter__',
+ '__le__',
+ '__len__',
+ '__lt__',
+ '__mul__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__rmul__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ 'count',
+ 'index']
 
 
 
+ ## Sets:
 
+ - Sets are a type of collection like tuple or lists, storing mixed data
+ - Sets are enclosed within curly bracked separated by commas.
+ - Sets are unordered
+ - Sets does not allow Duplicates
+ - A set is a collection which is unordered, unchangeable*, and unindexed.
+
+Syntax:
+myset = {"apple", "banana", "cherry"}
+
+```python
+# set
+Grades = ["A", "A", "B", "C", "D", "B", "B", "C", "D", "E", "C", "C", "A", "B", "F", "D", "C", "B", "C", "A", "B", "F", "B", "A", "E", "B", "B", "C", "D"]
+type(Grades)
+# lets say we want to find out the distinct grades
+set(Grades)
+```
+
+Output: list
+{'A', 'B', 'C', 'D', 'E', 'F'}
+
+
+#### len()
+
+len(Grades)
+Output: 6
+
+#### indexing: Set does not contain indexing
+
+grade[1]
+
+
+#### adding elements in a set
+
+
+```python
+a = {1,2,3,4}
+a.add(5)
+a
+```
+output: {1,2,3,4,5}
+
+```python
+a = {1,2,3,4}
+a.add(5)
+a.add(-1)
+a
+```
+output: {-1, 1, 2, 3, 4, 5}
+
+
+#### Remove
+
+```python
+a = {1,2,3,4}
+a.remove(4)
+a
+```
+output: {1,2,3}
+
+
+#### Set opeartion:
+
+##### Set methods
+
+
+Union represents the total unique elements in both sets.
+
+A.union(B) → {0, 1, 2, 3, 4, 5, 6, 8}
+
+Intersection represents the elements common to both sets.
+
+A.intersection(B) → {2, 4}
+
+Difference(A-B) represents the elements present in A and not in B.
+
+A.difference(B) → {0, 6, 8}
+
+Symmetric difference represents the union of the elements A and B minus the intersection of A and B.
+
+A^B → {0, 6, 8, 1, 3, 5}
+
+a = {1,2,3,4}
+b = {7,8,4,24}
+
+- Union:
+
+print(a|b) #union
+print(a.union(b))
+
+- Intersection:
+
+print(a&b) #intersection
+print(a.intersection(b))
+
+- difference
+print(a-b) #difference
+print(a.difference(b))
+
+- Symmetric Difference: Items that are either in A or in B but wont be in A and B
+
+print(a^b) # symmetric difference
 
