@@ -322,9 +322,16 @@ print(A,B)
 - With A[:], we are creating a new object, and this new object is assigned to B; here, any changes in list A would not affect list B anymore. 
 
 
+## Tuples
+
+- Tuples are ordered sequence of mixed data type.
+- Tuples allows duplicate values.
+- Tuples are similar to lists in almost of their functionalities, but there is one significant difference in both the data structures lists are mutable and tuples are not. 
+- Tuples are written as commans separated within paranthesis.
 
 
-
+Syntax:
+mytuple = ("apple", "banana", "cherry")
 
 
 
