@@ -348,6 +348,43 @@ Output:
 Enter a word:  dEEPAK
 {'A', 'E'}
 
+## Funtions:
+
+-Function is a block of reusable code that is used to perform a specific task. Functions help in organizing code, reducing redundancy, and improving the readability and maintainability of your programs.
+
+### Defining a Function in Python
+A function in Python is defined using the def keyword, followed by the function name and parentheses (optional parameters inside parentheses). The function body starts with an indentation level.
+
+### Syntax:
+```python
+Copy code
+def function_name(parameters):
+    # Function body
+    # Code to execute
+    return result 
+```
+def: The keyword used to define a function.
+function_name: The name of the function, which is called to execute the code inside it.
+parameters: Optional values passed to the function (can be zero or more).
+return: Optional statement used to send back a result from the function.
+
+
+- Function are user defined and inbuilt function. input() is an example of built in Functions.
+
+### Write a function which takes a values as a parameter and returns its factorial.
+
+```python
+# write a function that takes a value and return its factorial
+def factorial_func(n):
+    fact = 1
+    for i in range(1,n+1):
+        fact = fact*i
+    return(fact)
+factorial_func(5)
+```
+Output: 120
+
+
 
 
 
