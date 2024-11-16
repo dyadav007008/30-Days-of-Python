@@ -202,12 +202,151 @@ while attempt < max_attempt:
 
 ## for loop:
 
+```python
+# for loop
+# iterate over a list of string
+a = "One Piece is the best anime in the world"
+for var in a:
+    print(var,end=':')
+```
+
+```python
+# for loop
+# iterate over a list of string
+a = "One Piece is the best anime in the world"
+for var in a:
+    print(var)
+```
+
+```python
+# Iterating over dictionary
+
+student_data = {1:["deepak",10],2:["Juhi",15],3:["Harshita",29],4:["Kalpana",40],5:["Robert Downy Jr",3000]}
+student_data
+for key, val in student_data.items():
+    print(key, val)
+
+```
+
+Output:
+1 ['deepak', 10]
+2 ['Juhi', 15]
+3 ['Harshita', 29]
+4 ['Kalpana', 40]
+5 ['Robert Downy Jr', 3000]
+
+
+Range:
+
+```python
+# range
+for i in range(1,5):
+    print(i,end = ',')
+```
+Output: 1,2,3,4,5
+```python
+list1 = [1,4,2,6,4,7,8]
+
+for i in range(len(list1)):
+    print(list1[i])
+```
+
+Output :
+1
+4
+2
+6
+4
+7
+8
+
+```python
+print(list(range(1,100,2))) # print range of 1 to 100 with a skip step of 2
+```
+
+Output: [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99]
+
+## check if a number is prime or not:
+
+```python
+# Function to check if a number is prime
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+# List to store prime numbers
+prime_numbers = []
+
+# Loop through numbers from 1 to 20
+for number in range(1, 21):
+    if is_prime(number):
+        prime_numbers.append(number)
+
+print("Prime numbers between 1 and 20:", prime_numbers)
+```
+
+Prime numbers between 1 and 20: [2, 3, 5, 7, 11, 13, 17, 19]
+
+
+## Comprehensions
+
+li = ["Arun","Deepak","Joker","Mohit","Shubham","Chahat"]
+
+
+## List Comprehensions:
+
+```python
+# Functional Approach:
+# List Comprehension
+L2 = [len(word) for word in li]
+l2
+```
+
+
+```python
+# iterating over li and l2 simutaneously
+
+for i,j in zip(li,l2):
+    print(i," - ", j)
+```
+
+Output:
+Arun  -  4
+Deepak  -  6
+Joker  -  5
+Mohit  -  5
+Shubham  -  7
+Chahat  -  6
+
+
+## Dictionary Comprehension:
+
+```python
+## dicionary comrehension
+d = {word:len(word) for word in li}
+d
+```
+{'Arun': 4, 'Deepak': 6, 'Joker': 5, 'Mohit': 5, 'Shubham': 7, 'Chahat': 6}
 
 
 
+## Set Comprehension
+## Write a program which takes a word as input from user and returns vowels from the word 
 
-
-
+```python
+# Set Comprehension
+# Write a program which takes a word as input from user and returns vowels from the word 
+word = input("Enter a word: ")
+vowels = {char for char in word if char in "aeiouAEIOU"}
+vowels
+```
+Output:
+Enter a word:  dEEPAK
+{'A', 'E'}
 
 
 
