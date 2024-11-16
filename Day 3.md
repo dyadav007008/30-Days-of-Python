@@ -385,6 +385,160 @@ factorial_func(5)
 Output: 120
 
 
+## Function Parameters in Python
+- When defining functions in Python, we can specify parameters, which are placeholders for the values that will be passed to the function when it is called. These parameters allow us to pass data into a function and use that data within the function body. There are different types of parameters you can use depending on your needs.
+
+## Types of Function Parameters in Python
+- Positional Parameters
+- Default Parameters
+- Keyword Parameters
+- Variable-Length Parameters (*args and **kwargs)
+
+1. Default Parameters
+We can assign default values to function parameters. If no argument is passed for that parameter when the function is called, the default value will be used.
+
+```python
+def greet(name, age=25):
+    print(f"Hello, {name}. You are {age} years old.")
+
+# Calling the function with one argument
+greet("Bob")  # Outputs: Hello, Bob. You are 25 years old.
+
+# Calling the function with both arguments
+greet("Alice", 30)  # Outputs: Hello, Alice. You are 30 years old.
+```
+
+2. Keyword Parameters
+Keyword parameters allow us to pass arguments to a function by explicitly specifying the parameter names. This can make our code more readable and allow arguments to be passed in any order.
+
+```python
+def greet(name, age):
+    print(f"Hello, {name}. You are {age} years old.")
+
+# Calling the function with keyword arguments
+greet(age=30, name="Charlie")  # Outputs: Hello, Charlie. You are 30 years old.
+
+```
+
+3. Positional Parameters
+These are the most common type of parameters. When you call a function, the arguments you provide are assigned to parameters in the order in which they appear in the function definition.
+```python
+def greet(name, age):
+    print(f"Hello, {name}. You are {age} years old.")
+
+# Calling the function with positional arguments
+greet("Alice", 30)  # Outputs: Hello, Alice. You are 30 years old.
+```
+
+4. Variable-Length Parameters
+*args (Non-keyword Variable-Length Arguments)
+We can pass a variable number of positional arguments to a function using *args. args is a tuple that collects all additional positional arguments passed to the function.
+
+```python
+def add(*args):
+    return sum(args)
+
+# Calling the function with multiple arguments
+print(add(1, 2, 3))  # Outputs: 6
+print(add(10, 20, 30, 40, 50))  # Outputs: 150
+```
+```python
+def var_func(*args):
+  print(args)
+
+var_func(1,2,3,4,"abs")
+```
+
+## Summary:
+
+| Parameter Type             | Syntax             | Example Usage                                                      |
+|----------------------------|--------------------|--------------------------------------------------------------------|
+| Positional Parameters      | def func(a, b)     | func(10, 20) → a=10, b=20                                          |
+| Default Parameters         | def func(a, b=5)   | func(10) → a=10, b=5                                               |
+| Keyword Parameters         | def func(a, b)     | func(a=10, b=20) → a=10, b=20                                      |
+| Variable-Length Positional | def func(*args)    | func(10, 20, 30) → args = (10, 20, 30)                             |
+| Variable-Length Keyword    | def func(**kwargs) | func(name="Alice", age=25) → kwargs = {'name': 'Alice', 'age': 25} |
+
+# Lambda Function:
+
+In Python, lambda functions are small, anonymous (unnamed) functions that are defined using the lambda keyword. These functions can take any number of arguments but only contain a single expression. Lambda functions are primarily used when we need a simple function for a short duration, typically when working with functions like map(), filter(), or sorted().
+
+- Syntax:  lambda arguments: expression
+  
+## Key Features of Lambda Functions:
+- Anonymous: Lambda functions do not have a name.
+- Single Expression: They can only contain one expression. No statements or multiple expressions are allowed.
+- Return Value: Automatically returns the result of the expression without needing the return keyword.
+
+## Limitations of Lambda Functions:
+- Single Expression: Lambda functions can only have one expression. You cannot write complex logic or multiple statements inside a lambda function.
+- Not Readable for Complex Operations: When the logic inside the lambda becomes complex, it is often better to define a regular function for clarity.
+
+- Write a lambda function to check if a number is even or odd.
+
+```python
+f = lambda x: "Even" if x % 2 ==0 else "odd"
+f(int(input("Enter the number :")))
+```
+
+## Map, Filter and Reduce Function:
+
+### Map Function:
+
+The map() function in Python allows you to apply a specified function to each item in an iterable (like a list, tuple, etc.), and it returns a map object (which is an iterator) that produces the transformed results. The map() function is particularly useful when you need to apply the same operation to every element of an iterable.
+
+Syntax: map(function, iterable)
+
+```python
+# map Function
+l1 = ["Deepak","Juhi","Harshita","Abhishek","Kalpana"]
+def upper1(n):
+     return n.upper()
+l2 = map(upper1,l1)
+print(list(l2))
+```
+['DEEPAK', 'JUHI', 'HARSHITA', 'ABHISHEK', 'KALPANA']
+
+## The filter() Function in Python
+The filter() function in Python is used to filter elements from an iterable (like a list, tuple, etc.) based on a function that tests each element. It returns an iterator that contains only the elements for which the function returns True.
+
+Syntax: filter(function, iterable)
+
+```print
+# Filter function
+natural_number = [1,3,24,5,65,4,3,12,3,4,6,7,5]
+def iseven(n):
+    return n%2==0
+new = list(filter(iseven, natural_number))
+new
+```
+
+## Write a program to count the students with age above 18
+
+```python
+## Write a program to count the students with age above 18
+# lets define a dictionary
+dict1 = {1:["Deepak",20],2:["Juhi",20],3:["Kalpana",19],4:["Gopal",5],5:["Abhishek",16],6:["Arun",18]}
+values = [val[1] for val in dict1.values()]
+def plus18(n):
+    return n > 18
+new = list(filter(plus18,values))
+print(len(new))
+```
+
+# reduce() Function in Python
+The reduce() function is part of the functools module in Python. It applies a binary function (a function that takes two arguments) cumulatively to the items of an iterable, from left to right, so as to reduce the iterable to a single value.
+
+Syntax: 
+from functools import reduce
+reduce(function, iterable[, initializer])
+
+```python
+from functools import reduce
+l5 = [1,4,2,3,5]
+mul = reduce(lambda x,y : x*y,l5)
+print(mul)
+```
 
 
 
