@@ -261,7 +261,94 @@ n = sorted(set(m), reverse = True)
 print("The Second largest element is: ",n[1])
 ```
 
+## Intermediate-Level Questions:
 
+- Write a Python program to Merge Two Sorted Lists.
+
+```python
+list_1 = [1,3,5,7,9,11]
+list_2 = [2,4,6,8,10,12]
+final_list = sorted(list_1 + list_2)
+final_list
+```
+
+```python
+# Long Method
+list_1 = [1,3,5,7,9,11]
+list_2 = [2,4,6,8,10,12]
+i,j = 0,0
+final_list = []
+while i < len(list_1) and j < len(list_2):
+    if(list_1[i] < list_2[j]):
+        final_list.append(list_1[i])
+        i+=1
+    else:
+        final_list.append(list_2[j])
+        j+=1
+final_list.extend(list_1[i:])
+final_list.extend(list_2[j:])
+print(final_list)
+
+```
+
+```python
+list_1 = [1,3,5,7,9,11]
+list_2 = [2,4,6,8,10,12]
+
+final_list = list_1
+final_list.extend(list_2[:])
+final_list = sorted(final_list)
+final_list
+```
+
+- Write a Python program to Reverse Words in a String.
+
+```python
+won = 'Python is fun'
+new_string = won.split()
+new_string
+reverse_words = new_string[::-1]
+reverse_words = ' '.join(reverse_words)
+reverse_words
+```
+
+  
+- Write a Python program to Check for Perfect Numbers.
+
+```python
+# perfect number: A number who is sum of all its prime factors excluding itself:
+
+num1 = 28
+fact = 1
+for var in range(2,num1//2+1):
+    if (num1 % var == 0):
+        fact = fact+var
+
+if ( fact == num1):
+    print(str(num1) + " is a perfect number")
+else:
+    print(str(num1) + " is not a perfect number")
+```
+  
+- Write a Python program to Find the Fibonacci Sequence.
+
+  
+- Write a Python program to find Anagram Check.
+
+  
+- Write a Python program to Find the Average Numbers in a List.
+
+  
+- Write a Python program to calculate the Sum of Digits in a Number.
+
+
+- Write a Python program to check for Armstrong Number.
+
+  
+- Write a Python program to Check Palindrome.
+- Write a Python program to calculate Factorial without Recursion.
+- Write a Python program to Check Prime Numbers.
+- Write a Python program to calculate LCM (Least Common Multiple) of Two Numbers.
 
 
 
