@@ -194,7 +194,16 @@ char
 ```
   
 - Write a Python program to check if a Number is a Prime Factor.
-
+```python
+# program to get prime factors
+num = 35
+print(num//2)
+list1 = []
+for var in range(2,num//2):
+    if(num%var == 0):
+        list1.append(var)
+print(list1)
+```
   
 - Write a Python program to find the Maximum Difference between Two Elements in a List.
 
