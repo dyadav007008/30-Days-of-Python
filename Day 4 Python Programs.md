@@ -97,15 +97,158 @@ print(faren)
 ```
 
 - Write a Python program to Remove Duplicates from a String.
+
+Using Set 
+  ```python
+  # Write a Python program to Remove Duplicates from a String.
+
+a = input("enter a string")
+b = set(a)
+c = list(b)
+d =''.join(c)
+d
+```
+
+Using Function
+```python
+
+def remove_duplicates(input_string):
+    seen = set()
+    result = []
+    for char in input_string:
+        if char not in seen:
+            seen.add(char)
+            result.append(char)
+    return ''.join(result)
+input_string = "Hello World"
+print(remove_duplicates(input_string))
+   ```         
+
+
  
 - Write a Python program to check for Pangram.
-- Write a Python program to find the Minimum Element in a List.
-- Write a Python program to find the Maximum Element in a List.
-- Write a Python program to check if a Number is a Prime Factor.
-- Write a Python program to find the Maximum Difference between Two Elements in a List.
-- Write a Python program to Convert Decimal to Binary.
-- Write a Python program to Find Second Largest Element in a List.
+  ```python
+  # Write a Python program to check for Pangram.
+# Pangram should contain all letters of alphabet at least once
 
+
+using for looop:
+```python
+# pangram
+
+def pangramm(str_n,alpha):
+    for char in alpha:
+        if char not in str_n:
+            return False
+    return True
+
+str_n = input("enter a string").lower()
+alpha = 'abcdefghijklmnopqrstuvwxyz'
+if (pangramm(str_n,alpha) == False):
+    print("The string is not Pangram")
+else:
+    print("The string is Pangram:")
+```
+Output: enter a string asljkfdasd
+The string is not Pangram
+
+enter a string The quick brown fox jumps over a lazy dog
+The string is Pangram:    
+
+using string library
+
+```python
+import string
+
+def pangram(string1):
+    low_case = string1.lower()
+    alphabets = string.ascii_lowercase
+    for char in alphabets:
+        if char in low_case:
+            return False
+        return True
+
+string1 = input("enter the string to check if the string is pangram or not")
+result = pangram(string1)
+if (result == True):
+    print("The string is pangram")
+else:
+    print("The string is not pangram")
+```
+  
+- Write a Python program to find the Minimum Element in a List.
+
+```python
+a = [7,43,21,56,78]
+char = min(a)
+char
+```
+
+  
+- Write a Python program to find the Maximum Element in a List.
+
+```python
+a = [7,43,21,56,78]
+char = max(a)
+char
+```
+  
+- Write a Python program to check if a Number is a Prime Factor.
+
+  
+- Write a Python program to find the Maximum Difference between Two Elements in a List.
+
+  using Loop:
+  
+```python
+new_list = [5,4,2,5,6,78,8,2,3,4,5,6,89,87]
+max_diff = 0
+for var in new_list:
+    for var2 in new_list:
+        if var - var2 > max_diff:
+            max_diff = var - var2
+print(max_diff)
+```
+
+Short Method:
+
+```python
+new_list = [5,4,2,5,6,78,8,2,3,4,5,6,89,87]
+max_diff = max(new_list) - min(new_list)
+print(max_diff)
+```
+
+- Write a Python program to Convert Decimal to Binary.
+
+```python
+def binary_conv(a):
+    binary_conversion = ''
+    if a == 0:
+        return 0
+    else :
+        while(a>0):
+            binary_conversion = str(a % 2) + binary_conversion
+            a = a//2
+        return binary_conversion
+a = 10
+print("The Binary conversion of " + str(a) + " is " + binary_conv(a))
+```
+Short Method:
+
+```python
+decimal_num = 10
+binary_num = bin(decimal_num)
+binary_num[2:]
+```
+  
+- Write a Python program to Find Second Largest Element in a List.
+  
+```python
+
+m = [5,4,2,5,6,78,8,2,3,4,5,6,89,87]
+n = sorted(set(m), reverse = True)
+print("The Second largest element is: ",n[1])
+```
 
 
 
