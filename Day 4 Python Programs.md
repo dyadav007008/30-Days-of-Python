@@ -352,6 +352,49 @@ else:
 
 
 
+### Python Programs(Part 2:
+
+- Swapping 2 numbers
+```python
+  def swapping(a,b):
+    c=0
+    c=a
+    a=b
+    b=c
+    return(a,b)
+
+a = 10
+b = 5
+print(swapping(a,b))
+
+```
+
+```python
+m = 5
+n = 7
+print(m,n)
+m,n = n,m
+print(m,n)
+```
+
+- print if the input is even or odd
+
+```python
+# print if the number is even or odd
+
+def evenodd(num):
+    if num%2==0:
+        return True
+    else:
+        return False
+
+num = int(input("Enter the number to check if it is even or odd"))
+if (evenodd(num)== True):
+    print("Number is Even")
+else:
+    print("Number is Odd")
+```
+
 
 
 
