@@ -1,0 +1,5980 @@
+---
+
+## 🧭 **NumPy Chapter-Wise Syllabus (Full Roadmap)**
+
+---
+
+### 📘 **Chapter 1: Introduction to NumPy**
+
+**Goal:** Understand what NumPy is and why it’s used.
+**Topics:**
+
+* What is NumPy and why it’s faster than Python lists
+* Installing NumPy (`pip install numpy`)
+* Importing and using NumPy (`import numpy as np`)
+* Difference between Python lists and NumPy arrays
+* Array creation basics
+
+🧩 *Practice:*
+
+* Create 1D, 2D, and 3D arrays
+* Compare performance between list and array using `%timeit`
+
+---
+
+### 📗 **Chapter 2: Array Creation**
+
+**Goal:** Learn all ways to create arrays.
+**Topics:**
+
+* `np.array()` from lists or tuples
+* Built-in functions: `np.zeros()`, `np.ones()`, `np.full()`
+* Sequence creation: `np.arange()`, `np.linspace()`
+* Identity and diagonal arrays: `np.eye()`, `np.diag()`
+* Random arrays: `np.random.rand()`, `np.random.randint()`
+* Data type specification (`dtype=int`, `dtype=float`)
+
+🧩 *Practice:*
+Create 3x3 matrices using each method and check `.dtype`, `.shape`, `.ndim`.
+
+---
+
+### 📙 **Chapter 3: Array Attributes & Properties**
+
+**Goal:** Understand structure and internal details of arrays.
+**Topics:**
+
+* `.ndim`, `.shape`, `.size`, `.dtype`, `.itemsize`, `.nbytes`
+* `.T` (Transpose)
+* Memory and type information
+* Checking array type (`type()`) and class (`np.ndarray`)
+
+🧩 *Practice:*
+Display attributes of 1D, 2D, 3D arrays and interpret results.
+
+---
+
+### 📒 **Chapter 4: Array Indexing & Slicing**
+
+**Goal:** Access and modify array elements efficiently.
+**Topics:**
+
+* Indexing in 1D, 2D, and 3D arrays
+* Slicing: `[start:end:step]`
+* Boolean indexing and masking
+* Fancy indexing (array-based selection)
+* Changing values using slicing
+
+🧩 *Practice:*
+Extract subarrays, change values, and filter numbers > certain threshold.
+
+---
+
+### 📘 **Chapter 5: Array Operations**
+
+**Goal:** Perform arithmetic and mathematical operations.
+**Topics:**
+
+* Element-wise operations: `+`, `-`, `*`, `/`, `**`
+* Comparison and logical operations
+* Broadcasting rules
+* Universal functions (ufuncs): `np.sqrt()`, `np.exp()`, `np.log()`
+* Rounding, absolute, power functions
+
+🧩 *Practice:*
+Perform matrix addition, multiplication, and division using NumPy arrays.
+
+---
+
+### 📗 **Chapter 6: Statistical & Aggregate Functions**
+
+**Goal:** Summarize data using mathematical functions.
+**Topics:**
+
+* `np.sum()`, `np.mean()`, `np.median()`, `np.std()`, `np.var()`
+* `np.min()`, `np.max()`, `np.argmin()`, `np.argmax()`
+* Axis parameter (`axis=0`, `axis=1`)
+
+🧩 *Practice:*
+Compute row-wise and column-wise averages and standard deviations.
+
+---
+
+### 📙 **Chapter 7: Reshaping & Flattening**
+
+**Goal:** Change array dimensions safely.
+**Topics:**
+
+* `.reshape()`, `.ravel()`, `.flatten()`
+* `.resize()`
+* Transpose (`.T`)
+* Adding/removing dimensions: `np.newaxis`, `np.expand_dims()`
+
+🧩 *Practice:*
+Convert a 1D array to 2D (3×3) and flatten it back.
+
+---
+
+### 📒 **Chapter 8: Array Combination & Splitting**
+
+**Goal:** Join or split arrays easily.
+**Topics:**
+
+* Concatenation: `np.concatenate()`, `np.vstack()`, `np.hstack()`
+* Splitting: `np.split()`, `np.vsplit()`, `np.hsplit()`
+* Stacking along new axes: `np.stack()`
+
+🧩 *Practice:*
+Combine two arrays vertically and split them back into halves.
+
+---
+
+### 📘 **Chapter 9: Copying, Sorting, and Searching**
+
+**Goal:** Manage and manipulate array data safely.
+**Topics:**
+
+* Shallow vs deep copy (`view()` vs `copy()`)
+* `np.sort()`, `np.argsort()`
+* `np.where()`, `np.extract()`
+* Checking conditions: `np.any()`, `np.all()`
+
+🧩 *Practice:*
+Sort an array and extract values > average.
+
+---
+
+### 📗 **Chapter 10: Input / Output Operations**
+
+**Goal:** Save and load arrays efficiently.
+**Topics:**
+
+* `np.save()`, `np.load()`
+* `np.savetxt()`, `np.loadtxt()` (CSV files)
+* File formats: `.npy`, `.npz`
+
+🧩 *Practice:*
+Save a NumPy array to a CSV and reload it.
+
+---
+
+### 📙 **Chapter 11: Broadcasting & Vectorization**
+
+**Goal:** Understand how NumPy automatically stretches shapes.
+**Topics:**
+
+* Broadcasting rules
+* Element-wise operations between arrays of different shapes
+* Vectorized functions (avoid loops)
+
+🧩 *Practice:*
+Perform addition between a (3×3) and a (1×3) array.
+
+---
+
+### 📒 **Chapter 12: Advanced Topics (Optional for Analysts)**
+
+**Goal:** Optimize and handle larger computations.
+**Topics:**
+
+* Structured arrays (different data types per column)
+* Memory views and strides
+* Performance tricks with `np.vectorize()` and `np.fromfunction()`
+* Random seed reproducibility (`np.random.seed()`)
+
+🧩 *Practice:*
+Simulate small experiments using random data (e.g., dice rolls, scores).
+
+---
+
+## 🧾 Summary Table
+
+| Chapter | Topic              | Focus Area               |
+| ------- | ------------------ | ------------------------ |
+| 1       | Introduction       | Basics                   |
+| 2       | Array Creation     | Ways to create arrays    |
+| 3       | Attributes         | Array properties         |
+| 4       | Indexing & Slicing | Access data              |
+| 5       | Operations         | Math & logic             |
+| 6       | Aggregates         | Statistics               |
+| 7       | Reshape            | Dimensions               |
+| 8       | Combine/Split      | Merge or divide          |
+| 9       | Copy/Sort/Search   | Data handling            |
+| 10      | I/O                | Save & load              |
+| 11      | Broadcasting       | Efficient operations     |
+| 12      | Advanced           | Optimization & structure |
+
+---
+---
+
+# 📘 **Chapter 1 – Introduction to NumPy**
+
+---
+
+## 🧠 1️⃣ What is NumPy?
+
+**NumPy** (Numerical Python) is a **powerful library** for numerical and scientific computing in Python.
+It provides:
+
+* High-performance **multidimensional arrays**
+* Fast **mathematical operations**
+* Tools for **linear algebra, statistics, and data manipulation**
+
+👉 Used heavily in data analytics, machine learning, AI, image processing, etc.
+
+---
+
+## ⚙️ 2️⃣ Why NumPy instead of Python Lists?
+
+| Feature        | Python List                 | NumPy Array                    |
+| -------------- | --------------------------- | ------------------------------ |
+| **Speed**      | Slower (loop-based)         | Much faster (C-optimized)      |
+| **Memory**     | Uses more memory            | Compact memory layout          |
+| **Operations** | Manual loops needed         | Vectorized (element-wise math) |
+| **Dimensions** | 1-D only (nesting for more) | N-D arrays (1D, 2D, 3D …)      |
+| **Data Type**  | Can mix types               | Single consistent dtype        |
+
+---
+
+## 🧩 3️⃣ Installing and Importing NumPy
+
+```bash
+pip install numpy
+```
+
+```python
+import numpy as np
+```
+
+✅ `np` is the **standard alias** used in almost every project.
+
+---
+
+## 📊 4️⃣ Creating Your First Array
+
+### ➤ From a Python List
+
+```python
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+print(arr)
+print(type(arr))
+```
+
+**Output**
+
+```
+[1 2 3 4 5]
+<class 'numpy.ndarray'>
+```
+
+✅ NumPy array type = `ndarray` (N-Dimensional Array)
+
+---
+
+## 🧱 5️⃣ Multidimensional Arrays
+
+### ➤ 1-D Array
+
+```python
+np.array([1, 2, 3])
+# → [1 2 3]
+```
+
+### ➤ 2-D Array (Matrix)
+
+```python
+np.array([[1, 2, 3],
+          [4, 5, 6]])
+# → [[1 2 3]
+#    [4 5 6]]
+```
+
+### ➤ 3-D Array (Stack of Matrices)
+
+```python
+np.array([ [[1,2,3],[4,5,6]],
+           [[7,8,9],[10,11,12]] ])
+```
+
+✅ Each extra pair of brackets adds a dimension.
+
+---
+
+## 🔍 6️⃣ Array Attributes (Quick Check)
+
+```python
+arr = np.array([[1, 2, 3],
+                [4, 5, 6]])
+
+print(arr.ndim)   # dimensions → 2
+print(arr.shape)  # rows, cols → (2, 3)
+print(arr.size)   # total elements → 6
+print(arr.dtype)  # data type → int64
+```
+
+---
+
+## 🧮 7️⃣ Basic Array Operations
+
+```python
+arr = np.array([1, 2, 3, 4, 5])
+print(arr + 5)      # add 5 to each element
+print(arr * 2)      # multiply each element by 2
+print(np.sqrt(arr)) # square root of each element
+```
+
+✅ These are **vectorized operations** — no loops needed!
+
+---
+
+## ⚡ 8️⃣ Performance Comparison (List vs Array)
+
+```python
+import numpy as np
+import time
+
+# Python list
+lst = list(range(1000000))
+start = time.time()
+[x*2 for x in lst]
+print("List time:", time.time() - start)
+
+# NumPy array
+arr = np.arange(1000000)
+start = time.time()
+arr * 2
+print("NumPy time:", time.time() - start)
+```
+
+✅ NumPy will be **~10–50× faster** for large data.
+
+---
+
+## 🧾 9️⃣ Key Terms Summary
+
+| Term              | Meaning                                       |
+| ----------------- | --------------------------------------------- |
+| **ndarray**       | NumPy array object                            |
+| **axis**          | Dimension index (0 = rows, 1 = columns)       |
+| **dtype**         | Data type of elements                         |
+| **vectorization** | Operation on entire array without loops       |
+| **broadcasting**  | Automatic shape expansion for math operations |
+
+---
+---
+
+# 🧾 **NumPy – Chapter 1 Practice Sheet**
+
+📘 *Topic: Introduction to NumPy*
+
+---
+
+## ✅ **Section A: Basic Array Creation**
+
+### 1️⃣ Create a 1-D NumPy array from a Python list `[10, 20, 30, 40, 50]` and print its type.
+
+**Hint:** Use `np.array()` and `type()`.
+
+---
+
+### 2️⃣ Create a 2×3 NumPy array with elements from 1 to 6.
+
+**Hint:** Pass a nested list `[[1,2,3],[4,5,6]]`.
+
+---
+
+### 3️⃣ Check the following attributes of the above array:
+
+* Number of dimensions (`ndim`)
+* Shape (`shape`)
+* Total elements (`size`)
+* Data type (`dtype`)
+
+---
+
+### 4️⃣ Create a 3×3 array filled with 7s.
+
+**Hint:** Use `np.full((3,3),7)`.
+
+---
+
+### 5️⃣ Create a 1-D array of numbers from 0 to 9 using a NumPy function (not Python’s `range`).
+
+**Hint:** Try `np.arange()`.
+
+---
+
+## ✅ **Section B: Array Operations**
+
+### 6️⃣ Given `arr = np.array([2, 4, 6, 8])`, perform and print:
+
+* `arr + 3`
+* `arr * 2`
+* `np.sqrt(arr)`
+
+---
+
+### 7️⃣ Compute the **sum**, **mean**, and **standard deviation** of the array `np.array([1,2,3,4,5])`.
+
+**Hint:** Use NumPy’s built-in functions.
+
+---
+
+### 8️⃣ Create two arrays:
+
+```python
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+```
+
+Perform element-wise **addition**, **subtraction**, and **multiplication**.
+
+---
+
+## ✅ **Section C: Multi-Dimensional Arrays**
+
+### 9️⃣ Create a 3D array with 2 blocks, 2 rows, and 3 columns using numbers 1 to 12.
+
+**Hint:** `np.array([[[1,2,3], [4,5,6]], [[7,8,9], [10,11,12]]])`.
+
+---
+
+### 🔟 Access the element `5` from that 3D array using indexing.
+
+**Hint:** `[0][1][1]` → 1st block, 2nd row, 2nd column.
+
+---
+
+## ✅ **Section D: Comparison & Conversion**
+
+### 11️⃣ Create a float array `[1.2, 3.5, 7.8]` and convert it into integers.
+
+**Hint:** Use `.astype(int)`.
+
+---
+
+### 12️⃣ Convert the Python list `[[1,2,3],[4,5,6]]` into a NumPy array and verify its class type.
+
+**Hint:** `type()` should return `<class 'numpy.ndarray'>`.
+
+---
+
+## ✅ **Section E: Performance Check**
+
+### 13️⃣ Write a short script that multiplies each element of a list and a NumPy array (both with 1 million elements) by 2, and compare execution time using `time.time()`.
+
+**Hint:** You’ll see NumPy is much faster 🚀
+
+---
+
+## ✅ **Section F: Bonus (Conceptual)**
+
+### 14️⃣ What does `.ndim`, `.shape`, and `.size` represent?
+
+*(Answer conceptually — no code needed)*
+
+### 15️⃣ Why does NumPy show `1.` instead of `1.0` in output?
+
+*(Explain briefly)*
+
+---
+
+# ✅ **Answer Key (Quick Check)**
+
+|  Q  | Answer Summary                                                     |
+| :-: | :----------------------------------------------------------------- |
+|  1  | `np.array([10,20,30,40,50])`, type = `numpy.ndarray`               |
+|  2  | `np.array([[1,2,3],[4,5,6]])`                                      |
+|  3  | ndim = 2, shape = (2, 3), size = 6, dtype = int64                  |
+|  4  | `np.full((3,3),7)`                                                 |
+|  5  | `np.arange(10)`                                                    |
+|  6  | `[5 7 9 11]`, `[4 8 12 16]`, `[1.414… 2 …]`                        |
+|  7  | `sum=15`, `mean=3.0`, `std≈1.414`                                  |
+|  8  | `a+b=[5,7,9]`, `a-b=[-3,-3,-3]`, `a*b=[4,10,18]`                   |
+|  9  | 3D array shape `(2,2,3)`                                           |
+|  10 | `arr[0][1][1]` → 5                                                 |
+|  11 | `array([1,3,7])` after `.astype(int)`                              |
+|  12 | `type = numpy.ndarray`                                             |
+|  13 | NumPy ≈ 10–50× faster                                              |
+|  14 | ndim = # dimensions, shape = size per axis, size = total elements  |
+|  15 | Because elements are `float` type → shown as `1.` instead of `1.0` |
+
+---
+
+---
+
+# 📗 **Chapter 2 – Array Creation in NumPy**
+
+---
+
+## 🧠 1️⃣ Introduction
+
+After learning NumPy basics (Chapter 1), the next key step is mastering **how to create arrays** — because every NumPy workflow starts with creating or importing data.
+
+NumPy provides **many methods** to create arrays efficiently — from lists, ranges, constants, or random data.
+
+---
+
+## 🧩 2️⃣ Array Creation Methods Overview
+
+| Method              | Description                                              |
+| ------------------- | -------------------------------------------------------- |
+| `np.array()`        | Convert Python lists or tuples into arrays               |
+| `np.zeros()`        | Array of all zeros                                       |
+| `np.ones()`         | Array of all ones                                        |
+| `np.full()`         | Array filled with a constant value                       |
+| `np.arange()`       | Sequence of evenly spaced values (like Python’s `range`) |
+| `np.linspace()`     | Evenly spaced numbers between start and end              |
+| `np.eye()`          | Identity matrix (1s on diagonal)                         |
+| `np.random` methods | Arrays with random numbers                               |
+| `np.empty()`        | Creates an uninitialized array (faster but unsafe)       |
+
+---
+
+## 📘 3️⃣ Creating Arrays from Python Lists or Tuples
+
+```python
+import numpy as np
+
+arr1 = np.array([1, 2, 3, 4])
+arr2 = np.array([[1, 2, 3], [4, 5, 6]])
+
+print(arr1)
+print(arr2)
+```
+
+✅ Creates 1D and 2D arrays.
+
+**Check properties**
+
+```python
+print(arr2.ndim)   # 2
+print(arr2.shape)  # (2,3)
+print(arr2.dtype)  # int64
+```
+
+---
+
+## 🧱 4️⃣ Arrays with Zeros, Ones, and Constants
+
+```python
+np.zeros((3, 3))          # 3x3 of zeros
+np.ones((2, 4))           # 2x4 of ones
+np.full((2, 2), 7)        # 2x2 filled with 7
+```
+
+**Note:** Default data type = float (`1.` instead of `1.0`)
+
+```python
+np.ones((3,3), dtype=int)
+```
+
+✅ Creates integer ones.
+
+---
+
+## 🔢 5️⃣ Arrays from Numeric Sequences
+
+### ➤ `np.arange(start, stop, step)`
+
+Like Python’s `range()` but returns an array.
+
+```python
+np.arange(0, 10, 2)
+# Output: [0 2 4 6 8]
+```
+
+### ➤ `np.linspace(start, stop, num)`
+
+Generates evenly spaced numbers **between** start & stop.
+
+```python
+np.linspace(0, 1, 5)
+# Output: [0.   0.25 0.5  0.75 1.  ]
+```
+
+---
+
+## 🧮 6️⃣ Identity and Diagonal Arrays
+
+### ➤ `np.eye(n)`
+
+Creates an **identity matrix** (1s on diagonal).
+
+```python
+np.eye(3)
+# [[1. 0. 0.]
+#  [0. 1. 0.]
+#  [0. 0. 1.]]
+```
+
+### ➤ `np.diag(list)`
+
+Creates a **diagonal matrix** with given elements on the diagonal.
+
+```python
+np.diag([10, 20, 30])
+# [[10  0  0]
+#  [ 0 20  0]
+#  [ 0  0 30]]
+```
+
+---
+
+## 🎲 7️⃣ Random Arrays
+
+### ➤ `np.random.rand(m, n)`
+
+Random floats between 0 and 1.
+
+```python
+np.random.rand(2, 3)
+# Example output:
+# [[0.24 0.77 0.42]
+#  [0.59 0.11 0.88]]
+```
+
+### ➤ `np.random.randint(low, high, size)`
+
+Random integers between low and high.
+
+```python
+np.random.randint(10, 50, (2, 4))
+# e.g. [[12 34 49 21]
+#       [28 47 36 18]]
+```
+
+### ➤ `np.random.randn(m, n)`
+
+Samples from a **normal distribution** (mean=0, std=1).
+
+```python
+np.random.randn(3, 2)
+# e.g. [[ 0.3 -0.2]
+#       [ 1.2  0.7]
+#       [-1.1  0.9]]
+```
+
+---
+
+## ⚡ 8️⃣ Empty Arrays (Memory Efficient)
+
+```python
+np.empty((2, 3))
+```
+
+✅ Creates an array of random leftover memory values — useful when you’re going to overwrite it later.
+
+---
+
+## 🧾 9️⃣ Data Type (dtype) Control
+
+You can **set or change** data type.
+
+```python
+arr = np.ones((3, 3), dtype=int)
+print(arr.dtype)   # int64
+
+arr2 = arr.astype(float)
+print(arr2.dtype)  # float64
+```
+
+---
+
+## 🧩 10️⃣ Summary Table
+
+| Function              | Purpose         | Example                         |
+| --------------------- | --------------- | ------------------------------- |
+| `np.array()`          | From list/tuple | `np.array([1,2,3])`             |
+| `np.zeros()`          | All zeros       | `np.zeros((2,2))`               |
+| `np.ones()`           | All ones        | `np.ones((3,3))`                |
+| `np.full()`           | Constant value  | `np.full((2,3),5)`              |
+| `np.arange()`         | Range of ints   | `np.arange(0,10,2)`             |
+| `np.linspace()`       | Even floats     | `np.linspace(0,1,5)`            |
+| `np.eye()`            | Identity matrix | `np.eye(3)`                     |
+| `np.diag()`           | Diagonal matrix | `np.diag([1,2,3])`              |
+| `np.random.rand()`    | Random floats   | `np.random.rand(2,3)`           |
+| `np.random.randint()` | Random ints     | `np.random.randint(0,10,(2,3))` |
+
+---
+
+# 🧾 **Chapter 2 Practice Sheet**
+
+📗 *Topic: Array Creation in NumPy*
+
+---
+
+## ✅ **Section A: Basic Creation**
+
+1️⃣ Create a 1D array from list `[5, 10, 15, 20]`.
+2️⃣ Create a 2D 3×3 array from list of lists (numbers 1–9).
+3️⃣ Create a 3D array with dimensions `(2,2,3)` using any 6 numbers.
+4️⃣ Print the `.ndim`, `.shape`, `.size`, and `.dtype` of the above arrays.
+
+---
+
+## ✅ **Section B: Using Built-in Functions**
+
+5️⃣ Create a 4×4 array of zeros.
+6️⃣ Create a 3×2 array of ones (integer type).
+7️⃣ Create a 2×3 array filled with value `8`.
+8️⃣ Create an array with values `[0, 2, 4, 6, 8]` using `np.arange()`.
+9️⃣ Create an array with 6 evenly spaced numbers between 1 and 10 using `np.linspace()`.
+🔟 Create a 5×5 identity matrix.
+
+---
+
+## ✅ **Section C: Random & Diagonal**
+
+11️⃣ Create a 3×3 matrix with random integers between 1 and 20.
+12️⃣ Create a 2×4 array with random floats (0–1).
+13️⃣ Create a diagonal matrix with values `[5, 10, 15, 20]`.
+14️⃣ Create a random 3×3 matrix and check its mean using `np.mean()`.
+
+---
+
+## ✅ **Section D: Advanced/Optional**
+
+15️⃣ Create an **empty** 2×3 array and check its contents.
+16️⃣ Create an array of random numbers and convert it from `float` to `int` type using `.astype(int)`.
+17️⃣ Create a 3×3 matrix of 7s and convert it to `float`.
+18️⃣ Generate 10 random integers between 0–100, sort them, and print smallest & largest using `min()` & `max()`.
+
+---
+
+# ✅ **Quick Answers (Summary)**
+
+| Q  | Function Used                        | Expected Output |
+| -- | ------------------------------------ | --------------- |
+| 1  | `np.array()`                         | 1D array        |
+| 2  | `np.array()`                         | 3×3 matrix      |
+| 3  | `np.array()`                         | 2×2×3 3D array  |
+| 4  | `.ndim`, `.shape`, `.size`, `.dtype` | properties      |
+| 5  | `np.zeros((4,4))`                    | 4×4 zeros       |
+| 6  | `np.ones((3,2),dtype=int)`           | integer ones    |
+| 7  | `np.full((2,3),8)`                   | filled with 8   |
+| 8  | `np.arange(0,10,2)`                  | `[0 2 4 6 8]`   |
+| 9  | `np.linspace(1,10,6)`                | evenly spaced   |
+| 10 | `np.eye(5)`                          | identity matrix |
+| 11 | `np.random.randint(1,20,(3,3))`      | random ints     |
+| 12 | `np.random.rand(2,4)`                | random floats   |
+| 13 | `np.diag([5,10,15,20])`              | diagonal matrix |
+| 14 | `np.mean()`                          | numeric value   |
+| 15 | `np.empty((2,3))`                    | garbage values  |
+| 16 | `.astype(int)`                       | int array       |
+| 17 | `.astype(float)`                     | float array     |
+| 18 | `np.sort()` + `min()` + `max()`      | sorted + limits |
+
+---
+
+---
+
+# 📙 **Chapter 3 – Array Attributes & Properties in NumPy**
+
+---
+
+## 🧠 1️⃣ Introduction
+
+Once you create arrays in NumPy, it’s essential to **inspect and understand their structure** — dimensions, size, shape, data type, and memory usage.
+
+NumPy arrays come with several **attributes** (built-in properties) that tell you everything about the array **without calling a function** (no parentheses `()`).
+
+---
+
+## 🧩 2️⃣ What Are Attributes?
+
+> Attributes give **metadata** (information *about* the array) — not the values inside it.
+
+They describe:
+
+* Number of dimensions (axes)
+* Shape (rows × columns)
+* Data type
+* Memory consumption, etc.
+
+---
+
+## ⚙️ 3️⃣ Commonly Used Attributes
+
+| Attribute   | Description                         | Example        | Output              |
+| ----------- | ----------------------------------- | -------------- | ------------------- |
+| `.ndim`     | Number of dimensions (axes)         | `arr.ndim`     | `2`                 |
+| `.shape`    | Tuple of array dimensions           | `arr.shape`    | `(2,3)`             |
+| `.size`     | Total number of elements            | `arr.size`     | `6`                 |
+| `.dtype`    | Data type of elements               | `arr.dtype`    | `int64`             |
+| `.itemsize` | Size (in bytes) of one element      | `arr.itemsize` | `8`                 |
+| `.nbytes`   | Total memory (bytes) used by array  | `arr.nbytes`   | `48`                |
+| `.T`        | Transposed version (rows ↔ columns) | `arr.T`        | `[[1 4][2 5][3 6]]` |
+| `.data`     | Memory buffer (rarely used)         | `arr.data`     | `<memory at ...>`   |
+
+---
+
+## 🧮 4️⃣ Example Code
+
+```python
+import numpy as np
+
+arr = np.array([[1, 2, 3],
+                [4, 5, 6]])
+
+print("Array:\n", arr)
+print("Dimensions (ndim):", arr.ndim)
+print("Shape:", arr.shape)
+print("Total Elements (size):", arr.size)
+print("Data Type (dtype):", arr.dtype)
+print("Each Item Size (itemsize):", arr.itemsize, "bytes")
+print("Total Memory (nbytes):", arr.nbytes, "bytes")
+print("Transpose (T):\n", arr.T)
+```
+
+---
+
+## 🧾 Output:
+
+```
+Array:
+ [[1 2 3]
+ [4 5 6]]
+Dimensions (ndim): 2
+Shape: (2, 3)
+Total Elements (size): 6
+Data Type (dtype): int64
+Each Item Size (itemsize): 8 bytes
+Total Memory (nbytes): 48 bytes
+Transpose (T):
+ [[1 4]
+ [2 5]
+ [3 6]]
+```
+
+---
+
+## 🧱 5️⃣ Attribute Details Explained
+
+### ➤ `.ndim`
+
+Returns the **number of dimensions (axes)** in the array.
+
+```python
+a = np.array([1,2,3])
+b = np.array([[1,2,3],[4,5,6]])
+print(a.ndim)  # 1
+print(b.ndim)  # 2
+```
+
+---
+
+### ➤ `.shape`
+
+Gives a tuple showing **rows and columns**.
+
+```python
+b.shape  # (2, 3)
+```
+
+✅ Means: 2 rows × 3 columns.
+
+---
+
+### ➤ `.size`
+
+Shows total **number of elements**.
+
+```python
+b.size  # 6
+```
+
+---
+
+### ➤ `.dtype`
+
+Shows the **data type** of each element.
+
+```python
+arr = np.array([1.2, 2.5, 3.7])
+print(arr.dtype)  # float64
+```
+
+---
+
+### ➤ `.itemsize` and `.nbytes`
+
+Used to calculate **memory usage**.
+
+If `dtype` = `int64`,
+→ each element = 8 bytes.
+
+```python
+print(arr.itemsize)  # 8
+print(arr.nbytes)    # total bytes = 8 * arr.size
+```
+
+---
+
+### ➤ `.T` (Transpose)
+
+Swaps rows ↔ columns.
+
+```python
+arr = np.array([[1, 2, 3],
+                [4, 5, 6]])
+print(arr.T)
+# [[1 4]
+#  [2 5]
+#  [3 6]]
+```
+
+---
+
+### ➤ `.data`
+
+Shows the **memory address** (rarely used in practice).
+
+```python
+arr.data
+# <memory at 0x000001D6...>
+```
+
+---
+
+## 🧮 6️⃣ Array Dimension Examples
+
+```python
+a = np.array(10)
+b = np.array([1, 2, 3])
+c = np.array([[1, 2, 3], [4, 5, 6]])
+d = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+
+print(a.ndim)  # 0D (scalar)
+print(b.ndim)  # 1D
+print(c.ndim)  # 2D
+print(d.ndim)  # 3D
+```
+
+---
+
+## 🧠 7️⃣ Quick Summary Table
+
+| Attribute   | Meaning            | Example            |
+| ----------- | ------------------ | ------------------ |
+| `.ndim`     | Dimensions         | 2                  |
+| `.shape`    | Shape (rows, cols) | (2,3)              |
+| `.size`     | Elements count     | 6                  |
+| `.dtype`    | Data type          | int64              |
+| `.itemsize` | Bytes per element  | 8                  |
+| `.nbytes`   | Total bytes used   | 48                 |
+| `.T`        | Transpose          | Swaps rows/columns |
+
+---
+
+## 💡 8️⃣ Practical Tip
+
+Use these attributes to **debug or validate** your data before analysis — e.g., when reshaping, joining, or applying mathematical operations.
+
+---
+
+# 🧾 **Chapter 3 Practice Sheet**
+
+📙 *Topic: Array Attributes & Properties*
+
+---
+
+## ✅ **Section A: Basic Attributes**
+
+1️⃣ Create a 2×3 array:
+`[[1,2,3],[4,5,6]]`
+Print its:
+
+* Dimensions
+* Shape
+* Size
+* Data type
+
+---
+
+2️⃣ Create a 3×3 array of floats and check:
+
+* `.dtype`
+* `.itemsize`
+* `.nbytes`
+
+---
+
+3️⃣ Create a 1D array `[10,20,30,40,50]` and find:
+
+* Number of elements
+* Shape
+* Type of elements
+
+---
+
+4️⃣ Create a 2×3 array and print its transpose using `.T`.
+
+---
+
+## ✅ **Section B: Understanding Dimensions**
+
+5️⃣ Create the following arrays and print their `.ndim`:
+
+```python
+a = np.array(10)
+b = np.array([1, 2, 3])
+c = np.array([[1, 2, 3], [4, 5, 6]])
+d = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+```
+
+---
+
+6️⃣ Create an array of shape `(4,5)` and print the total elements using `.size`.
+
+---
+
+7️⃣ Create an array using `np.arange(9)` and reshape it to `(3,3)`.
+Check `.ndim`, `.shape`, `.size`.
+
+---
+
+## ✅ **Section C: Data Type & Memory**
+
+8️⃣ Create an array `[1.1, 2.2, 3.3]` and check its:
+
+* `.dtype`
+* `.itemsize`
+* `.nbytes`
+
+---
+
+9️⃣ Create an integer array and convert it to float using `.astype(float)`.
+Print both `.dtype` values.
+
+---
+
+🔟 Create a large array of shape `(1000, 1000)` and print its total memory in bytes.
+
+---
+
+## ✅ **Section D: Challenge Zone**
+
+11️⃣ Write a program to:
+
+* Create any 2D array
+* Print all its attributes in a readable format (use f-strings)
+
+Example:
+
+```
+Dimensions: 2
+Shape: (3,4)
+Elements: 12
+Data Type: int64
+Memory: 96 bytes
+```
+
+---
+
+# ✅ **Quick Answer Summary**
+
+|  Q  | Attribute(s) Practiced               | Key Output               |
+| :-: | ------------------------------------ | ------------------------ |
+|  1  | `.ndim`, `.shape`, `.size`, `.dtype` | (2,3), 2D                |
+|  2  | `.dtype`, `.itemsize`, `.nbytes`     | float64, 8 bytes         |
+|  3  | `.size`, `.shape`, `.dtype`          | 5, (5,)                  |
+|  4  | `.T`                                 | transposed array         |
+|  5  | `.ndim`                              | 0,1,2,3                  |
+|  6  | `.size`                              | 20                       |
+|  7  | `.reshape()` + `.shape`              | (3,3), 9 elements        |
+|  8  | `.dtype`, `.itemsize`                | float64, 8 bytes         |
+|  9  | `.astype(float)`                     | converted type           |
+|  10 | `.nbytes`                            | 8,000,000 bytes (approx) |
+|  11 | All attributes                       | summary printed          |
+
+---
+---
+
+# 📒 **Chapter 4 – Indexing & Slicing in NumPy**
+
+---
+
+## 🧠 1️⃣ Introduction
+
+After creating and understanding arrays, the next step is **extracting, updating, and manipulating elements** — this is where **indexing and slicing** come in.
+
+NumPy indexing is much more powerful and flexible than regular Python lists — supporting:
+
+* Basic indexing (by position)
+* Slicing (range-based selection)
+* Boolean and fancy indexing (advanced selection)
+
+---
+
+## 🧩 2️⃣ Basic Indexing (Single Element Access)
+
+Just like lists, **indexing starts from 0**.
+
+### ➤ 1D Array
+
+```python
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50])
+print(arr[0])   # 10
+print(arr[2])   # 30
+print(arr[-1])  # 50 (last element)
+```
+
+✅ Negative indexing counts from the end.
+
+---
+
+### ➤ 2D Array
+
+```python
+arr2 = np.array([[1, 2, 3],
+                 [4, 5, 6],
+                 [7, 8, 9]])
+
+print(arr2[0, 1])  # Row 0, Col 1 → 2
+print(arr2[1, 2])  # Row 1, Col 2 → 6
+print(arr2[-1, 0]) # Last row, first column → 7
+```
+
+📌 **Syntax:**
+`arr[row_index, column_index]`
+
+---
+
+### ➤ 3D Array
+
+```python
+arr3 = np.array([
+    [[1,2,3], [4,5,6]],
+    [[7,8,9], [10,11,12]]
+])
+
+print(arr3[0, 1, 2])  # → 6
+print(arr3[1, 0, 1])  # → 8
+```
+
+---
+
+## ✂️ 3️⃣ Slicing (Extracting Ranges)
+
+Slicing lets you extract **multiple elements or subarrays** using the syntax:
+
+```python
+array[start:end:step]
+```
+
+> It includes `start` but excludes `end`.
+
+---
+
+### ➤ 1D Slicing
+
+```python
+arr = np.array([10, 20, 30, 40, 50, 60])
+
+print(arr[1:4])   # [20 30 40]
+print(arr[:3])    # [10 20 30]
+print(arr[3:])    # [40 50 60]
+print(arr[::2])   # [10 30 50]
+print(arr[::-1])  # reverse array → [60 50 40 30 20 10]
+```
+
+---
+
+### ➤ 2D Slicing
+
+```python
+arr2 = np.array([[1, 2, 3],
+                 [4, 5, 6],
+                 [7, 8, 9]])
+
+print(arr2[0:2, 1:3])
+# [[2 3]
+#  [5 6]]
+
+print(arr2[:, 1])
+# [2 5 8]  → all rows, 2nd column
+```
+
+📌 **Syntax for 2D:**
+`array[row_start:row_end, col_start:col_end]`
+
+---
+
+### ➤ 3D Slicing
+
+```python
+arr3 = np.array([
+    [[1,2,3],[4,5,6]],
+    [[7,8,9],[10,11,12]]
+])
+
+print(arr3[:, 0, :])
+# [[1 2 3]
+#  [7 8 9]]
+```
+
+---
+
+## 🔁 4️⃣ Modifying Elements
+
+You can modify values directly using indexing or slicing.
+
+```python
+arr = np.array([10, 20, 30, 40])
+arr[2] = 99
+print(arr)  # [10 20 99 40]
+
+arr[:2] = [1, 2]
+print(arr)  # [1 2 99 40]
+```
+
+---
+
+## 🧮 5️⃣ Boolean Indexing (Condition-Based Selection)
+
+Extract elements based on **conditions**.
+
+```python
+arr = np.array([10, 15, 20, 25, 30])
+print(arr > 20)
+# [False False False  True  True]
+
+print(arr[arr > 20])
+# [25 30]
+```
+
+✅ You can use any logical operator:
+
+* `>`  greater than
+* `<`  less than
+* `==` equal to
+* `!=` not equal
+* Combine: `(arr > 10) & (arr < 30)`
+
+---
+
+## 🎯 6️⃣ Fancy Indexing (Index Arrays)
+
+Use a **list or array of indices** to select multiple non-contiguous elements.
+
+```python
+arr = np.array([10, 20, 30, 40, 50])
+idx = [0, 2, 4]
+print(arr[idx])  # [10 30 50]
+```
+
+### ➤ 2D Fancy Indexing
+
+```python
+arr2 = np.array([[10, 20, 30],
+                 [40, 50, 60],
+                 [70, 80, 90]])
+
+print(arr2[[0,2], [1,2]])
+# Picks (0,1) and (2,2) → [20 90]
+```
+
+---
+
+## 📘 7️⃣ Slicing vs Copying (Important!)
+
+Slicing creates a **view (not a copy)** — changes affect the original array.
+
+```python
+arr = np.array([1, 2, 3, 4, 5])
+slice_arr = arr[1:4]
+slice_arr[:] = 0
+print(arr)  
+# [1 0 0 0 5]  ← original array changed!
+```
+
+To make an **independent copy**, use `.copy()`:
+
+```python
+arr_copy = arr[1:4].copy()
+arr_copy[:] = 9
+print(arr)       # [1 0 0 0 5]
+print(arr_copy)  # [9 9 9]
+```
+
+---
+
+## 🧩 8️⃣ Quick Summary Table
+
+| Type                 | Example        | Result                      |
+| -------------------- | -------------- | --------------------------- |
+| **Basic Indexing**   | `arr[1,2]`     | Single element              |
+| **Slice (1D)**       | `arr[1:4]`     | Range of values             |
+| **Slice (2D)**       | `arr[0:2,1:3]` | Sub-matrix                  |
+| **Boolean Indexing** | `arr[arr>10]`  | Values > 10                 |
+| **Fancy Indexing**   | `arr[[0,3,4]]` | Elements at positions 0,3,4 |
+| **Reverse**          | `arr[::-1]`    | Reversed array              |
+| **Copy**             | `.copy()`      | Independent copy            |
+
+---
+
+# 🧾 **Chapter 4 Practice Sheet**
+
+📒 *Topic: Indexing & Slicing in NumPy*
+
+---
+
+## ✅ **Section A: Basic Indexing**
+
+1️⃣ Create a 1D array `[5,10,15,20,25,30]`.
+
+* Print the first, last, and third element.
+* Replace the last element with `99`.
+
+---
+
+2️⃣ Create a 3×3 array:
+
+```python
+[[1,2,3],
+ [4,5,6],
+ [7,8,9]]
+```
+
+* Access element `6` using indexing.
+* Access element `8` using negative indexing.
+
+---
+
+3️⃣ Create a 3D array:
+
+```python
+[[[1,2],[3,4]],
+ [[5,6],[7,8]]]
+```
+
+Print:
+
+* Element `6`
+* Element `3`
+
+---
+
+## ✅ **Section B: Slicing**
+
+4️⃣ From `arr = np.array([10,20,30,40,50,60])`:
+
+* Extract `[20,30,40]`
+* Extract every alternate element
+* Reverse the array
+
+---
+
+5️⃣ For 2D array:
+
+```python
+arr = np.array([[10,20,30],
+                [40,50,60],
+                [70,80,90]])
+```
+
+* Extract subarray `[[20,30],[50,60]]`
+* Extract 2nd column (`[20,50,80]`)
+* Extract last row (`[70,80,90]`)
+
+---
+
+## ✅ **Section C: Boolean Indexing**
+
+6️⃣ Create `arr = np.array([10,15,20,25,30])`
+
+* Extract all elements > 20
+* Extract all even numbers
+
+---
+
+## ✅ **Section D: Fancy Indexing**
+
+7️⃣ Create `arr = np.array([100,200,300,400,500])`
+
+* Extract elements at indices `[0,2,4]`
+
+8️⃣ For the 2D array:
+
+```python
+arr = np.array([[1,2,3],
+                [4,5,6],
+                [7,8,9]])
+```
+
+* Use fancy indexing to extract `[2,6,7]`
+
+---
+
+## ✅ **Section E: Copy vs View**
+
+9️⃣ Demonstrate that slicing returns a **view**, not a copy, by modifying a slice and showing it changes the original array.
+
+🔟 Use `.copy()` to show how to create an independent copy.
+
+---
+
+# ✅ **Quick Answer Summary**
+
+|  Q  | Concept     | Key Result                           |
+| :-: | :---------- | :----------------------------------- |
+|  1  | Indexing 1D | Access + modify                      |
+|  2  | Indexing 2D | Element positions                    |
+|  3  | Indexing 3D | Nested indexing                      |
+|  4  | 1D Slicing  | `[20,30,40]`, `[10,30,50]`, reversed |
+|  5  | 2D Slicing  | Subarrays & columns                  |
+|  6  | Boolean     | Filter by condition                  |
+|  7  | Fancy       | `[100,300,500]`                      |
+|  8  | Fancy 2D    | `[2,6,7]`                            |
+|  9  | View        | Original modified                    |
+|  10 | Copy        | Original unchanged                   |
+
+---
+
+---
+
+# 📗 **Chapter 5 – Array Operations in NumPy**
+
+---
+
+## 🧠 1️⃣ Introduction
+
+Now that you know how to create, inspect, and slice arrays, it’s time to **perform operations** on them.
+
+NumPy allows **vectorized** (element-wise) operations — meaning you can perform mathematical or logical operations on the **entire array** at once, without using loops.
+
+These operations make NumPy **extremely fast** for data analysis, linear algebra, and scientific computing.
+
+---
+
+## 🧩 2️⃣ Arithmetic Operations (Element-wise)
+
+NumPy performs arithmetic **element-by-element** on arrays of the same shape.
+
+```python
+import numpy as np
+
+a = np.array([10, 20, 30, 40])
+b = np.array([1, 2, 3, 4])
+
+print(a + b)   # addition
+print(a - b)   # subtraction
+print(a * b)   # multiplication
+print(a / b)   # division
+print(a // b)  # floor division
+print(a ** b)  # exponent (power)
+```
+
+✅ Works element-wise:
+Each operation applies to every pair of elements in the same position.
+
+---
+
+### ➤ Output:
+
+```
+[11 22 33 44]
+[ 9 18 27 36]
+[10 40 90 160]
+[10. 10. 10. 10.]
+[10 10 10 10]
+[10 400 27000 256000]
+```
+
+---
+
+## 🧮 3️⃣ Scalar Operations (Single Value)
+
+You can apply operations between an array and a scalar (number).
+
+```python
+a = np.array([1, 2, 3, 4])
+print(a + 10)
+print(a * 5)
+print(a / 2)
+```
+
+✅ The scalar is **broadcasted** to every element.
+
+---
+
+## 🎯 4️⃣ Comparison & Logical Operations
+
+### ➤ Element-wise Comparison
+
+```python
+a = np.array([10, 20, 30, 40])
+b = np.array([20, 20, 20, 20])
+
+print(a == b)  # equal
+print(a > b)   # greater than
+print(a < b)   # less than
+```
+
+Output:
+
+```
+[False  True False False]
+[False False  True  True]
+[ True False False False]
+```
+
+---
+
+### ➤ Logical Operations
+
+Combine multiple conditions:
+
+```python
+arr = np.array([10, 15, 20, 25, 30])
+print((arr > 10) & (arr < 30))  # AND
+print((arr < 20) | (arr > 25))  # OR
+print(~(arr > 15))              # NOT
+```
+
+---
+
+## 🧮 5️⃣ Aggregate / Statistical Operations
+
+NumPy provides fast **aggregation** functions.
+
+```python
+arr = np.array([[10, 20, 30],
+                [40, 50, 60]])
+
+print(np.sum(arr))      # 210
+print(np.mean(arr))     # 35.0
+print(np.min(arr))      # 10
+print(np.max(arr))      # 60
+print(np.std(arr))      # 17.078
+print(np.var(arr))      # 292.0
+```
+
+---
+
+### ➤ Axis Parameter (Important)
+
+Use `axis` to apply operations **row-wise or column-wise**.
+
+```python
+print(np.sum(arr, axis=0))  # column-wise → [50 70 90]
+print(np.sum(arr, axis=1))  # row-wise → [60 150]
+```
+
+---
+
+## 🔢 6️⃣ Universal Functions (ufuncs)
+
+NumPy provides **built-in mathematical functions** that apply element-wise and run in C speed.
+
+### ➤ Basic ufunc examples:
+
+```python
+arr = np.array([1, 4, 9, 16, 25])
+
+print(np.sqrt(arr))   # square root
+print(np.exp(arr))    # e^x
+print(np.log(arr))    # natural log
+print(np.sin(arr))    # sine
+print(np.cos(arr))    # cosine
+print(np.abs([-3, -7, 2]))  # absolute value
+```
+
+---
+
+## 🔁 7️⃣ Rounding & Ceiling / Floor
+
+```python
+arr = np.array([1.2, 2.8, 3.5, 4.7])
+
+print(np.round(arr))  # [1. 3. 4. 5.]
+print(np.floor(arr))  # [1. 2. 3. 4.]
+print(np.ceil(arr))   # [2. 3. 4. 5.]
+```
+
+---
+
+## ⚡ 8️⃣ Broadcasting
+
+NumPy can operate on arrays of **different shapes** automatically, if they are *broadcast compatible*.
+
+### ➤ Example:
+
+```python
+a = np.array([[1, 2, 3],
+              [4, 5, 6]])
+b = np.array([10, 20, 30])
+
+print(a + b)
+```
+
+Output:
+
+```
+[[11 22 33]
+ [14 25 36]]
+```
+
+✅ `b` (1D) is **broadcasted** across both rows of `a` (2D).
+
+---
+
+## 🧩 9️⃣ Mathematical Constants
+
+NumPy provides built-in constants:
+
+```python
+print(np.pi)     # 3.141592653589793
+print(np.e)      # 2.718281828459045
+```
+
+---
+
+## 🧾 10️⃣ Summary Table
+
+| Category     | Function                        | Example               |                    |
+| ------------ | ------------------------------- | --------------------- | ------------------ |
+| Arithmetic   | `+ - * / // **`                 | Element-wise math     |                    |
+| Scalar Ops   | `a * 10`                        | Multiply all elements |                    |
+| Comparison   | `==, >, <, !=`                  | Boolean result        |                    |
+| Logical      | `&`, `                          | `, `~`                | Combine conditions |
+| Aggregates   | `sum, mean, min, max, std, var` | Summary stats         |                    |
+| Axis         | `axis=0/1`                      | Row/Column-wise       |                    |
+| ufuncs       | `sqrt, exp, log, sin, cos, abs` | Math functions        |                    |
+| Rounding     | `round, floor, ceil`            | Control precision     |                    |
+| Broadcasting | `a + b`                         | Auto shape expansion  |                    |
+
+---
+
+# 🧾 **Chapter 5 Practice Sheet**
+
+📗 *Topic: Array Operations (Mathematical & Logical)*
+
+---
+
+## ✅ **Section A: Arithmetic Operations**
+
+1️⃣ Create arrays:
+
+```python
+a = np.array([2,4,6,8])
+b = np.array([1,3,5,7])
+```
+
+Perform and print:
+
+* `a + b`
+* `a - b`
+* `a * b`
+* `a / b`
+* `a ** 2`
+
+---
+
+2️⃣ Create `arr = np.array([5,10,15,20])`
+
+* Add 5 to every element
+* Multiply all elements by 10
+* Divide all elements by 2
+
+---
+
+## ✅ **Section B: Comparison & Logic**
+
+3️⃣ Given:
+
+```python
+arr = np.array([10,20,30,40,50])
+```
+
+Find:
+
+* Which elements are greater than 25
+* Which are divisible by 10
+* Elements between 15 and 45
+
+---
+
+4️⃣ Combine logical conditions:
+
+```python
+arr = np.array([3,7,12,18,25,31])
+```
+
+Select elements:
+
+* Greater than 10 **and** less than 30
+* Less than 5 **or** greater than 20
+
+---
+
+## ✅ **Section C: Aggregate Functions**
+
+5️⃣ For:
+
+```python
+arr = np.array([[10,20,30],
+                [40,50,60]])
+```
+
+Compute:
+
+* Total sum
+* Mean
+* Min, Max
+* Column-wise sum
+* Row-wise mean
+
+---
+
+## ✅ **Section D: Universal Functions**
+
+6️⃣ Create `arr = np.array([1,4,9,16,25])`
+Find:
+
+* Square root
+* Log
+* Exponential
+* Sin & Cos values
+
+---
+
+7️⃣ Create an array of random floats and:
+
+* Round them to 1 decimal place
+* Apply floor and ceil
+
+---
+
+## ✅ **Section E: Broadcasting**
+
+8️⃣ Create:
+
+```python
+a = np.array([[1,2,3],
+              [4,5,6]])
+b = np.array([10,20,30])
+```
+
+Perform `a + b` and explain the result.
+
+---
+
+## ✅ **Section F: Bonus**
+
+9️⃣ Create `arr = np.array([-5, -2, 0, 3, 7])`
+Find:
+
+* Absolute values
+* Positive numbers only (use boolean indexing)
+
+🔟 Create a 4×4 random integer matrix (1–100).
+Find:
+
+* Overall mean
+* Row-wise minimum
+* Column-wise maximum
+
+---
+
+# ✅ **Quick Answers Summary**
+
+|  Q  | Concept      | Key Output             |
+| :-: | :----------- | :--------------------- |
+|  1  | Arithmetic   | Element-wise math      |
+|  2  | Scalar Ops   | `[10,20,30,40]` etc    |
+|  3  | Boolean      | Filter by condition    |
+|  4  | Logical      | AND / OR combinations  |
+|  5  | Aggregates   | sum=210, mean=35       |
+|  6  | Ufuncs       | sqrt/log/sin/cos       |
+|  7  | Rounding     | floor/ceil results     |
+|  8  | Broadcasting | Adds row-wise          |
+|  9  | Abs/Filter   | `[5,2,0,3,7]`, `[3,7]` |
+|  10 | Random Stats | mean/min/max           |
+
+
+---
+
+# 📙 **Chapter 6 – Aggregate Functions & Axis Operations in NumPy**
+
+---
+
+## 🧠 1️⃣ Introduction
+
+Aggregation = **summarizing data** into a single value or smaller summary (like total, average, min, max, etc.).
+
+NumPy provides a wide range of built-in **aggregate functions** that operate **fast**, especially when combined with the **axis** parameter (to apply row-wise or column-wise).
+
+---
+
+## 🧩 2️⃣ Basic Aggregate Functions
+
+| Function       | Description         | Example           |
+| -------------- | ------------------- | ----------------- |
+| `np.sum()`     | Sum of all elements | `np.sum(arr)`     |
+| `np.mean()`    | Average value       | `np.mean(arr)`    |
+| `np.median()`  | Median value        | `np.median(arr)`  |
+| `np.std()`     | Standard deviation  | `np.std(arr)`     |
+| `np.var()`     | Variance            | `np.var(arr)`     |
+| `np.min()`     | Minimum value       | `np.min(arr)`     |
+| `np.max()`     | Maximum value       | `np.max(arr)`     |
+| `np.argmin()`  | Index of min value  | `np.argmin(arr)`  |
+| `np.argmax()`  | Index of max value  | `np.argmax(arr)`  |
+| `np.cumsum()`  | Cumulative sum      | `np.cumsum(arr)`  |
+| `np.cumprod()` | Cumulative product  | `np.cumprod(arr)` |
+
+---
+
+## 🧮 3️⃣ Example – Basic Aggregations
+
+```python
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50])
+
+print("Sum:", np.sum(arr))
+print("Mean:", np.mean(arr))
+print("Median:", np.median(arr))
+print("Std Dev:", np.std(arr))
+print("Variance:", np.var(arr))
+print("Min:", np.min(arr))
+print("Max:", np.max(arr))
+print("Argmin:", np.argmin(arr))
+print("Argmax:", np.argmax(arr))
+print("Cumulative Sum:", np.cumsum(arr))
+```
+
+---
+
+### ➤ Output
+
+```
+Sum: 150
+Mean: 30.0
+Median: 30.0
+Std Dev: 14.14
+Variance: 200.0
+Min: 10
+Max: 50
+Argmin: 0
+Argmax: 4
+Cumulative Sum: [10 30 60 100 150]
+```
+
+✅ These functions help summarize 1D or 2D data very quickly.
+
+---
+
+## 🧱 4️⃣ Axis Parameter (Row-wise or Column-wise)
+
+Every aggregate function can use the `axis` argument to control **which direction** it operates on.
+
+| Axis     | Description                    | Example               |
+| -------- | ------------------------------ | --------------------- |
+| `axis=0` | Column-wise (down each column) | Operates vertically   |
+| `axis=1` | Row-wise (across each row)     | Operates horizontally |
+
+---
+
+### ➤ Example:
+
+```python
+arr = np.array([[10, 20, 30],
+                [40, 50, 60]])
+
+print("Sum along columns:", np.sum(arr, axis=0))
+print("Sum along rows:", np.sum(arr, axis=1))
+```
+
+### ➤ Output:
+
+```
+Sum along columns: [50 70 90]
+Sum along rows: [60 150]
+```
+
+✅
+
+* `axis=0`: collapses rows → keeps one value per **column**
+* `axis=1`: collapses columns → keeps one value per **row**
+
+---
+
+## 📊 5️⃣ Aggregate Example – Real-world Analogy
+
+Imagine sales data (rows = regions, columns = months):
+
+```python
+sales = np.array([[120, 150, 100],
+                  [200, 210, 190],
+                  [50,  80,  60]])
+
+# Total company sales
+print(np.sum(sales))  # 1160
+
+# Average monthly sales per region
+print(np.mean(sales, axis=1))  # [123.3 200.0 63.3]
+
+# Total sales per month
+print(np.sum(sales, axis=0))   # [370 440 350]
+```
+
+✅ Use this logic directly for analytics work (e.g., sales, revenue, temperature, etc.)
+
+---
+
+## 🧩 6️⃣ Minimum / Maximum and Index Locations
+
+```python
+arr = np.array([[5, 10, 15],
+                [20, 25, 30]])
+
+print("Min value:", np.min(arr))
+print("Max value:", np.max(arr))
+print("Min index:", np.argmin(arr))
+print("Max index:", np.argmax(arr))
+```
+
+Output:
+
+```
+Min value: 5
+Max value: 30
+Min index: 0
+Max index: 5
+```
+
+✅ Note: Index is flattened in a 1D order.
+
+---
+
+## 📈 7️⃣ Cumulative Functions
+
+Useful for **running totals** or **progressive calculations**.
+
+```python
+arr = np.array([1, 2, 3, 4, 5])
+
+print("Cumulative Sum:", np.cumsum(arr))
+print("Cumulative Product:", np.cumprod(arr))
+```
+
+Output:
+
+```
+Cumulative Sum: [ 1  3  6 10 15]
+Cumulative Product: [  1   2   6  24 120]
+```
+
+---
+
+## 🧮 8️⃣ Percentile & Quantile
+
+Used to find cutoffs (like 25th, 50th, 75th percentile).
+
+```python
+arr = np.array([10, 20, 30, 40, 50, 60])
+
+print("50th percentile (median):", np.percentile(arr, 50))
+print("25th percentile:", np.percentile(arr, 25))
+print("75th percentile:", np.percentile(arr, 75))
+```
+
+Output:
+
+```
+50th percentile: 35.0
+25th percentile: 22.5
+75th percentile: 47.5
+```
+
+---
+
+## 🧾 9️⃣ Summary Table
+
+| Function                       | Description              | Common Use            |
+| ------------------------------ | ------------------------ | --------------------- |
+| `np.sum()`                     | Total sum                | Totals, KPIs          |
+| `np.mean()`                    | Average                  | Central tendency      |
+| `np.median()`                  | Median                   | Middle value          |
+| `np.std()`                     | Standard deviation       | Variability           |
+| `np.var()`                     | Variance                 | Spread measure        |
+| `np.min()` / `np.max()`        | Min & Max                | Range checks          |
+| `np.argmin()` / `np.argmax()`  | Index of min/max         | Locate extremes       |
+| `np.cumsum()` / `np.cumprod()` | Cumulative total/product | Running totals        |
+| `np.percentile()`              | Percentile values        | Quartiles, thresholds |
+
+---
+
+## 💡 10️⃣ Practical Tips
+
+* Use `axis` carefully when summarizing datasets (row vs column).
+* Use `argmin`/`argmax` when you need **position** of best/worst performers.
+* Use `percentile()` for distribution cutoffs (used in analytics a lot).
+* NumPy aggregates are **vectorized** → super fast even for millions of records.
+
+---
+
+# 🧾 **Chapter 6 Practice Sheet**
+
+📙 *Topic: Aggregate Functions & Axis Operations*
+
+---
+
+## ✅ **Section A: Basic Aggregates**
+
+1️⃣ Create `arr = np.array([5,10,15,20,25])`
+Find:
+
+* Sum
+* Mean
+* Median
+* Min & Max
+* Standard Deviation
+
+---
+
+2️⃣ Create:
+
+```python
+arr = np.array([[1,2,3],
+                [4,5,6],
+                [7,8,9]])
+```
+
+Find:
+
+* Total sum
+* Row-wise sum
+* Column-wise mean
+
+---
+
+3️⃣ Given `arr = np.array([10, 25, 30, 40, 60])`, find:
+
+* Index of min and max value
+* Cumulative sum
+
+---
+
+## ✅ **Section B: Real-world Dataset Example**
+
+4️⃣ Suppose monthly sales data:
+
+```python
+sales = np.array([[200,250,300],
+                  [150,180,210],
+                  [300,280,320]])
+```
+
+Find:
+
+* Total sales for the company
+* Total per region (row-wise)
+* Average sales per month (column-wise)
+
+---
+
+5️⃣ Create an array of random integers (shape 4×5, range 10–100).
+Find:
+
+* Total mean
+* Row-wise minimum
+* Column-wise maximum
+
+---
+
+## ✅ **Section C: Percentiles & Cumulative**
+
+6️⃣ Given exam scores:
+
+```python
+scores = np.array([35,50,65,70,80,85,90,95])
+```
+
+Find:
+
+* 25th, 50th, and 75th percentiles
+* Cumulative average using `np.cumsum(scores) / np.arange(1, len(scores)+1)`
+
+---
+
+7️⃣ Create `arr = np.arange(1,11)`
+Print cumulative sum and cumulative product.
+
+---
+
+## ✅ **Section D: Challenge Zone**
+
+8️⃣ Create a 3×3 random matrix of values 1–50.
+Find:
+
+* Total sum
+* Column-wise std deviation
+* Row with highest total (hint: use `argmax` on `sum(axis=1)`)
+
+---
+
+9️⃣ Given temperature readings:
+
+```python
+temps = np.array([[28, 32, 30],
+                  [26, 35, 33],
+                  [31, 29, 34]])
+```
+
+Find:
+
+* Highest temperature of each day (row-wise max)
+* Average temperature per column (column mean)
+* Day with highest overall temperature (argmax)
+
+---
+
+# ✅ **Quick Answer Summary**
+
+|  Q  | Concept        | Expected Output          |
+| :-: | :------------- | :----------------------- |
+|  1  | Sum, Mean, Std | 75, 15, 7.07             |
+|  2  | Axis ops       | (Row sum, Col mean)      |
+|  3  | Argmin/Argmax  | min=0, max=4             |
+|  4  | Real example   | total=2060, axis=0/1 ops |
+|  5  | Random stats   | mean, min, max           |
+|  6  | Percentile     | 25th=~57.5, 75th=~87.5   |
+|  7  | Cumsum/Cumprod | [1..55], [1..3628800]    |
+|  8  | Challenge      | argmax(row_sum) result   |
+|  9  | Real temps     | axis-based summaries     |
+
+---
+
+
+
+# 📘 **Chapter 7 – Reshaping, Flattening, and Expanding Arrays**
+
+---
+
+## 🧠 1️⃣ Introduction
+
+Once you’ve created arrays, the next step is to **change their shape** for analysis, visualization, or model input.
+
+NumPy gives you multiple ways to:
+
+* Change shape (`reshape`)
+* Flatten (convert multi-D → 1D)
+* Add or remove dimensions (`expand_dims`, `squeeze`)
+
+👉 These operations **don’t change data**, only **how data is structured** in memory.
+
+---
+
+## 🧩 2️⃣ Array Shape Recap
+
+Every NumPy array has a **shape** attribute — a tuple showing the number of elements along each dimension.
+
+```python
+import numpy as np
+
+arr = np.array([[1, 2, 3],
+                [4, 5, 6]])
+
+print(arr.shape)  # (2, 3)
+```
+
+✅ Means 2 rows × 3 columns = 6 elements total.
+
+---
+
+## 🔁 3️⃣ `reshape()` – Change Shape Without Changing Data
+
+### ➤ Syntax
+
+```python
+array.reshape(new_shape)
+```
+
+### ➤ Example
+
+```python
+arr = np.arange(1, 13)
+reshaped = arr.reshape(3, 4)
+print(reshaped)
+```
+
+Output:
+
+```
+[[ 1  2  3  4]
+ [ 5  6  7  8]
+ [ 9 10 11 12]]
+```
+
+✅ Reshaped from (12,) → (3,4)
+
+---
+
+### ⚠️ Important Rule:
+
+Product of dimensions must remain **constant**.
+
+```python
+arr.reshape(2, 6)  # ✅ (2×6 = 12 elements)
+arr.reshape(4, 3)  # ✅ (4×3 = 12 elements)
+arr.reshape(5, 3)  # ❌ Error – mismatch (15 ≠ 12)
+```
+
+---
+
+### ➤ Auto dimension with `-1`
+
+Let NumPy infer one dimension automatically.
+
+```python
+arr = np.arange(12)
+print(arr.reshape(3, -1))
+# Output: (3 rows × 4 cols)
+```
+
+✅ `-1` tells NumPy: “Figure out the correct dimension.”
+
+---
+
+## 🔄 4️⃣ `ravel()` and `flatten()` – Flatten to 1D
+
+Both functions **convert multi-dimensional arrays into a single 1D array**.
+
+### ➤ Example:
+
+```python
+arr = np.array([[1, 2, 3],
+                [4, 5, 6]])
+
+print(arr.ravel())
+print(arr.flatten())
+```
+
+Output:
+
+```
+[1 2 3 4 5 6]
+[1 2 3 4 5 6]
+```
+
+---
+
+### ⚙️ Difference Between `.ravel()` and `.flatten()`
+
+| Method       | Returns  | Copy or View         | Faster   |
+| ------------ | -------- | -------------------- | -------- |
+| `.ravel()`   | 1D array | **View (no copy)**   | ✅ Yes    |
+| `.flatten()` | 1D array | **Copy (new array)** | ❌ Slower |
+
+```python
+flat = arr.ravel()
+flat[0] = 99
+print(arr)  # Changes original (since it's a view)
+```
+
+---
+
+## ➕ 5️⃣ `expand_dims()` – Add a Dimension
+
+Used to **increase the dimensions** of an array (e.g., 1D → 2D, 2D → 3D).
+
+### ➤ Example:
+
+```python
+arr = np.array([1, 2, 3, 4])
+expanded = np.expand_dims(arr, axis=0)
+print(expanded)
+print(expanded.shape)
+```
+
+Output:
+
+```
+[[1 2 3 4]]
+(1, 4)
+```
+
+✅ Adds a new axis at position 0.
+
+```python
+np.expand_dims(arr, axis=1)
+# Output:
+# [[1]
+#  [2]
+#  [3]
+#  [4]]
+# Shape: (4,1)
+```
+
+---
+
+## ➖ 6️⃣ `squeeze()` – Remove Single-Dimension Axes
+
+Removes dimensions of size 1 (opposite of expand).
+
+```python
+arr = np.array([[[10], [20], [30]]])
+print(arr.shape)  # (1, 3, 1)
+
+squeezed = np.squeeze(arr)
+print(squeezed)
+print(squeezed.shape)  # (3,)
+```
+
+✅ Useful for cleaning up data shapes from ML model outputs or broadcasting results.
+
+---
+
+## 🔁 7️⃣ `resize()` – Change Shape (and Size)
+
+Unlike `reshape()`, it can **change the number of elements** (by repeating or trimming).
+
+```python
+arr = np.array([1, 2, 3, 4, 5, 6])
+arr.resize((2, 2))
+print(arr)
+```
+
+Output:
+
+```
+[[1 2]
+ [3 4]]
+```
+
+⚠️ The original array changes in place.
+
+---
+
+## 🧮 8️⃣ `reshape()` with Axis Operations
+
+```python
+arr = np.arange(1, 13).reshape(3, 4)
+print(arr)
+print(np.sum(arr, axis=0))  # column-wise sum
+print(np.sum(arr, axis=1))  # row-wise sum
+```
+
+---
+
+## 🧩 9️⃣ Practical Example
+
+Imagine you get 12 months of data in a single row —
+you can reshape it into quarters easily:
+
+```python
+sales = np.arange(1, 13)
+print(sales.reshape(4, 3))  # 4 quarters × 3 months
+```
+
+✅ Perfect real-world use for reshaping.
+
+---
+
+## 🧾 10️⃣ Summary Table
+
+| Function         | Purpose             | Copy/View | Example                |
+| ---------------- | ------------------- | --------- | ---------------------- |
+| `.reshape()`     | Change shape        | View      | `a.reshape(2,3)`       |
+| `.ravel()`       | Flatten array       | View      | `a.ravel()`            |
+| `.flatten()`     | Flatten array       | Copy      | `a.flatten()`          |
+| `.expand_dims()` | Add dimension       | New array | `np.expand_dims(a, 0)` |
+| `.squeeze()`     | Remove 1-sized dims | New array | `np.squeeze(a)`        |
+| `.resize()`      | Resize array        | In-place  | `a.resize((2,2))`      |
+
+---
+
+# 🧾 **Chapter 7 Practice Sheet**
+
+📘 *Topic: Reshaping, Flattening, and Expanding Arrays*
+
+---
+
+## ✅ **Section A: Reshaping**
+
+1️⃣ Create an array of 12 numbers (1–12).
+
+* Reshape it into (3,4).
+* Reshape it into (2,6).
+* Reshape it using `-1` to infer automatically.
+
+---
+
+2️⃣ Create a 1D array `[1,2,3,4,5,6]`
+
+* Convert it into shape (2,3).
+* Check its `.ndim` and `.shape`.
+
+---
+
+3️⃣ Try to reshape `[1,2,3,4,5,6]` into (4,4).
+👉 What happens and why?
+
+---
+
+## ✅ **Section B: Flattening**
+
+4️⃣ Create:
+
+```python
+arr = np.array([[10,20,30],
+                [40,50,60]])
+```
+
+* Flatten it using `.ravel()` and `.flatten()`.
+* Change a value in `.ravel()` output — does the original change?
+
+---
+
+## ✅ **Section C: Expanding & Squeezing**
+
+5️⃣ Create a 1D array `[5,10,15,20]`
+
+* Convert it into a 2D row using `expand_dims(axis=0)`
+* Convert it into a 2D column using `expand_dims(axis=1)`
+
+---
+
+6️⃣ Create:
+
+```python
+arr = np.array([[[10],[20],[30]]])
+```
+
+* Print its shape
+* Apply `np.squeeze()`
+* Print new shape
+
+---
+
+## ✅ **Section D: Resize & Real-world Use**
+
+7️⃣ Create an array `[1,2,3,4,5,6]` and use `resize()` to make it (3,2).
+Then resize it again to (2,2). Observe what happens.
+
+---
+
+8️⃣ Given 12 months of data `np.arange(1,13)` —
+reshape it into 4 quarters (4×3).
+
+---
+
+9️⃣ Create a 3×4 matrix and find:
+
+* Row-wise sum
+* Column-wise average
+* Flatten it using `.ravel()`
+
+---
+
+## ✅ **Section E: Challenge Zone**
+
+🔟 Given `sales = np.arange(1,25)`
+
+* Reshape into (6,4)
+* Find sum per quarter (`axis=1`)
+* Flatten the result
+* Expand its dimension back into 2D (using `expand_dims`)
+
+---
+
+# ✅ **Quick Answer Summary**
+
+|  Q  | Concept              | Expected Result                    |
+| :-: | :------------------- | :--------------------------------- |
+|  1  | Reshape              | (3,4), (2,6), (auto)               |
+|  2  | Shape info           | ndim=2, shape=(2,3)                |
+|  3  | Error                | total elements mismatch            |
+|  4  | Flatten              | `.ravel()` view, `.flatten()` copy |
+|  5  | Expand dims          | (1,4) and (4,1)                    |
+|  6  | Squeeze              | (3,)                               |
+|  7  | Resize               | Trims or repeats                   |
+|  8  | Real use             | (4,3) quarterly data               |
+|  9  | Axis ops + flatten   | Correct sums/means                 |
+|  10 | Multi-step challenge | Full reshape + flatten cycle       |
+
+
+---
+
+# 📗 **Chapter 8 – Combining & Splitting Arrays in NumPy**
+
+---
+
+## 🧠 1️⃣ Introduction
+
+In real-world data work, you constantly need to:
+
+* Merge datasets
+* Stack arrays on top of each other
+* Split arrays into chunks
+* Combine multiple features
+
+NumPy provides clean and powerful functions to do all of this.
+
+---
+
+# 🧩 **Part A — Combining Arrays**
+
+---
+
+## ⭐ 2️⃣ `np.concatenate()` – Combine Along an Axis
+
+The most general way to combine arrays.
+
+### ➤ Syntax:
+
+```python
+np.concatenate((arr1, arr2), axis=0)
+```
+
+### ➤ Example:
+
+```python
+a = np.array([[1,2],
+              [3,4]])
+
+b = np.array([[5,6],
+              [7,8]])
+
+np.concatenate((a, b), axis=0)   # vertical
+```
+
+Output:
+
+```
+[[1 2]
+ [3 4]
+ [5 6]
+ [7 8]]
+```
+
+Horizontal:
+
+```python
+np.concatenate((a, b), axis=1)
+```
+
+Output:
+
+```
+[[1 2 5 6]
+ [3 4 7 8]]
+```
+
+---
+
+## ⭐ 3️⃣ Vertical Stack – `np.vstack()`
+
+Stacks arrays **row-wise** (one on top of another).
+
+```python
+np.vstack((a, b))
+```
+
+Equivalent to `axis=0`.
+
+---
+
+## ⭐ 4️⃣ Horizontal Stack – `np.hstack()`
+
+Stacks arrays **column-wise**.
+
+```python
+np.hstack((a, b))
+```
+
+Equivalent to `axis=1`.
+
+---
+
+## ⭐ 5️⃣ Depth-wise Stack – `np.dstack()`
+
+Stacks arrays **depth-wise** (along axis 2).
+
+```python
+np.dstack((a, b))
+```
+
+Output shape becomes `(rows, cols, 2)`.
+
+---
+
+## ⭐ 6️⃣ `np.stack()` – Create New Axis While Stacking
+
+Unlike concatenate, `stack` **adds a new dimension**.
+
+```python
+np.stack((a, b), axis=0)
+```
+
+Output shape:
+
+```
+(2, 2, 2)
+```
+
+---
+
+# 🧩 **Part B — Splitting Arrays**
+
+---
+
+## ⭐ 7️⃣ `np.split()` – Split into Equal Parts
+
+```python
+arr = np.arange(10)
+
+np.split(arr, 2)
+```
+
+Output:
+
+```
+[array([0,1,2,3,4]), array([5,6,7,8,9])]
+```
+
+---
+
+## ⭐ 8️⃣ Vertical Split – `np.vsplit()`
+
+```python
+m = np.array([[1,2,3],
+              [4,5,6],
+              [7,8,9]])
+
+np.vsplit(m, 3)
+```
+
+Output:
+
+```
+[array([[1,2,3]]),
+ array([[4,5,6]]),
+ array([[7,8,9]])]
+```
+
+---
+
+## ⭐ 9️⃣ Horizontal Split – `np.hsplit()`
+
+```python
+np.hsplit(m, 3)
+```
+
+Output:
+
+```
+[array([[1],
+       [4],
+       [7]]),
+ array([[2],
+       [5],
+       [8]]),
+ array([[3],
+       [6],
+       [9]])]
+```
+
+---
+
+## ⭐ 🔟 Depth Split – `np.dsplit()`
+
+Useful when working with 3D arrays (e.g., image channels).
+
+---
+
+# 🧾 **Part C — Summary Table**
+
+| Function        | Purpose            | Axis       |
+| --------------- | ------------------ | ---------- |
+| `concatenate()` | Combine arrays     | Given axis |
+| `vstack()`      | Vertical combine   | axis=0     |
+| `hstack()`      | Horizontal combine | axis=1     |
+| `dstack()`      | Depth combine      | axis=2     |
+| `stack()`       | Add new axis       | Custom     |
+| `split()`       | Split equally      | Given axis |
+| `vsplit()`      | Vertical split     | axis=0     |
+| `hsplit()`      | Horizontal split   | axis=1     |
+
+---
+
+# 🧾 **Chapter 8 Practice Sheet**
+
+---
+
+## ✅ **Section A: Concatenation**
+
+1️⃣ Create:
+
+```python
+a = np.array([[1,2],
+              [3,4]])
+
+b = np.array([[5,6],
+              [7,8]])
+```
+
+* Concatenate vertically
+* Concatenate horizontally
+
+---
+
+## ✅ **Section B: Stacking**
+
+2️⃣ Using `a` and `b` above:
+
+* Stack using `np.vstack()`
+* Stack using `np.hstack()`
+* Stack using `np.dstack()`
+* Stack using `np.stack(axis=0)`
+
+---
+
+## ✅ **Section C: Splitting**
+
+3️⃣ Create:
+
+```python
+arr = np.arange(12).reshape(3,4)
+```
+
+* Split into 3 horizontal parts
+* Split into 2 vertical parts
+
+---
+
+4️⃣ Given:
+
+```python
+arr = np.arange(10)
+```
+
+Use:
+
+* `np.split(arr, 2)`
+* `np.split(arr, 5)`
+
+What happens if you try `np.split(arr, 3)`?
+
+---
+
+## ✅ **Section D: Real-world Shape Tasks**
+
+5️⃣ Combine 3 arrays vertically:
+
+```python
+r1 = np.array([50,60,70])
+r2 = np.array([80,90,100])
+r3 = np.array([110,120,130])
+```
+
+---
+
+6️⃣ Given 2D array:
+
+```python
+m = np.array([[10,20,30],
+              [40,50,60],
+              [70,80,90]])
+```
+
+Split into:
+
+* 3 separate rows (vsplit)
+* 3 separate columns (hsplit)
+
+---
+
+## ✅ **Section E: Challenge Zone**
+
+7️⃣ Given:
+
+```python
+sales_q1 = np.array([[100,200,300],
+                     [150,250,350]])
+
+sales_q2 = np.array([[120,220,320],
+                     [180,280,380]])
+```
+
+Tasks:
+
+* Combine Q1 and Q2 **by rows**
+* Combine Q1 and Q2 **by columns**
+* Stack Q1 and Q2 into a **3D array**
+
+---
+
+8️⃣ Create a 3D array of shape `(3,3,3)` and split it into:
+
+* 3 matrices using `vsplit()`
+* 3 depth slices using `dsplit()`
+
+---
+
+---
+
+# 📘 **Chapter 9 – Copying, Sorting & Searching in NumPy**
+
+---
+
+## 🧠 1️⃣ Introduction
+
+When working with arrays, you’ll often need to:
+
+✔ Make copies without affecting original data
+✔ Sort arrays (ascending/descending)
+✔ Find positions of values
+✔ Search using conditions
+✔ Extract values based on conditions
+
+These operations are crucial for **data cleaning**, **feature engineering**, and **ETL pipelines**.
+
+---
+
+# 🧩 PART A — Copying in NumPy
+
+---
+
+## ⭐ 2️⃣ View vs Copy
+
+### ➤ `.view()` → Creates a **shallow copy**
+
+(They share the **same memory**)
+
+### ➤ `.copy()` → Creates a **deep copy**
+
+(Independent array in new memory)
+
+---
+
+### Example:
+
+```python
+arr = np.array([1,2,3,4])
+
+v = arr.view()
+c = arr.copy()
+
+v[0] = 99     # modifies original
+c[1] = 88     # does NOT modify original
+```
+
+Output:
+
+```
+arr = [99 2 3 4]
+v   = [99 2 3 4]
+c   = [1 88 3 4]
+```
+
+✔ Use `.view()` for performance
+✔ Use `.copy()` when you need safety
+
+---
+
+# 🧩 PART B — Sorting
+
+---
+
+## ⭐ 3️⃣ `np.sort()` → Returns a **sorted copy**
+
+```python
+arr = np.array([4,1,7,2])
+print(np.sort(arr))
+```
+
+Output:
+
+```
+[1 2 4 7]
+```
+
+Original remains unchanged.
+
+---
+
+## ⭐ 4️⃣ `arr.sort()` → Sorts **in place**
+
+```python
+arr.sort()
+print(arr)
+```
+
+---
+
+## ⭐ 5️⃣ Sorting 2D Arrays
+
+### ➤ Sort **each row**
+
+```python
+np.sort(arr, axis=1)
+```
+
+### ➤ Sort **each column**
+
+```python
+np.sort(arr, axis=0)
+```
+
+---
+
+# 🧩 PART C — Searching
+
+---
+
+## ⭐ 6️⃣ `np.where()` → Return indices where condition is true
+
+```python
+arr = np.array([10,20,30,40,20])
+np.where(arr == 20)
+```
+
+Output:
+
+```
+(array([1, 4]),)
+```
+
+---
+
+## ⭐ 7️⃣ Extract values using `where()`
+
+```python
+arr[np.where(arr > 25)]
+```
+
+Output:
+
+```
+[30 40]
+```
+
+---
+
+## ⭐ 8️⃣ `np.nonzero()` → Indices of non-zero elements
+
+```python
+np.nonzero([0,3,0,5])
+```
+
+Output:
+
+```
+(array([1, 3]),)
+```
+
+---
+
+# 🧩 PART D — argsort (Very Important)
+
+## ⭐ 9️⃣ `np.argsort()` → Returns indices that would sort the array
+
+```python
+arr = np.array([50,10,40,20])
+print(np.argsort(arr))
+```
+
+Output:
+
+```
+[1 3 2 0]
+```
+
+Meaning:
+
+* Smallest element at index 1
+* Next smallest at index 3
+* etc.
+
+👉 Used heavily in **ranking**, **recommendation**, **top-k logic**.
+
+---
+
+# 🧩 PART E — Extracting & Boolean Checks
+
+---
+
+## ⭐ 10️⃣ `np.extract()` → Extract items that meet a condition
+
+```python
+arr = np.array([1,2,3,4,5])
+np.extract(arr % 2 == 0, arr)
+```
+
+Output:
+
+```
+[2 4]
+```
+
+---
+
+## ⭐ 11️⃣ `np.any()` & `np.all()` → Logical Checks
+
+### ➤ any() — if *any* element is True
+
+```python
+np.any(arr > 3)
+# True
+```
+
+### ➤ all() — if *all* elements are True
+
+```python
+np.all(arr > 3)
+# False
+```
+
+Useful for validation and constraints.
+
+---
+
+# 🧾 PART F — Summary Table
+
+| Function       | Purpose                          |
+| -------------- | -------------------------------- |
+| `.copy()`      | Deep copy                        |
+| `.view()`      | Shallow copy                     |
+| `np.sort()`    | Sorted copy                      |
+| `arr.sort()`   | Sort in place                    |
+| `np.where()`   | Indices where condition met      |
+| `np.extract()` | Return values matching condition |
+| `np.argsort()` | Indices of sorted order          |
+| `np.nonzero()` | Indices of non-zero items        |
+| `np.any()`     | At least one True                |
+| `np.all()`     | All True                         |
+
+---
+
+# 🧾 **Chapter 9 Practice Sheet**
+
+---
+
+## ✅ **Section A: Copy vs View**
+
+1️⃣ Create `arr = np.array([10,20,30,40])`
+
+* Make a `.view()`
+* Modify element 0
+* Check original
+
+2️⃣ Make `.copy()`, modify it, and confirm original does NOT change.
+
+---
+
+## ✅ **Section B: Sorting**
+
+3️⃣ Sort the array:
+
+```python
+arr = np.array([5,1,9,3,7])
+```
+
+* using `np.sort()`
+* using `arr.sort()`
+
+4️⃣ For 2D array:
+
+```python
+m = np.array([[3,2,1],
+              [6,5,4]])
+```
+
+* Sort row-wise
+* Sort column-wise
+
+---
+
+## ✅ **Section C: Searching**
+
+5️⃣ For:
+
+```python
+arr = np.array([10,20,30,20,40])
+```
+
+Find:
+
+* Indices of 20
+* Indices where arr > 25
+* Extract values > 25
+
+---
+
+6️⃣ Use `np.nonzero()` on:
+
+```python
+x = np.array([0,2,0,5,0,9])
+```
+
+---
+
+## ✅ **Section D: argsort**
+
+7️⃣ For:
+
+```python
+arr = np.array([60,10,50,20])
+```
+
+Find:
+
+* Indices that would sort the array
+* Use those indices to print array in sorted order
+
+(Hint: `arr[np.argsort(arr)]`)
+
+---
+
+8️⃣ Sort the rows of a 2D array using `argsort()`.
+
+---
+
+## ✅ **Section E: Extract, any(), all()**
+
+9️⃣ Given:
+
+```python
+arr = np.array([12,17,5,9,24,31])
+```
+
+Tasks:
+
+* Extract even numbers
+* Extract numbers > 20
+* Check if *any* value is > 30
+* Check if *all* values are > 0
+
+---
+
+## 🎯 **Bonus Challenges**
+
+🔟 For the matrix:
+
+```python
+m = np.array([[10,15,20],
+              [5,50,30],
+              [25,35,45]])
+```
+
+Find:
+
+* Index of global min
+* Index of global max
+* Row containing the maximum value
+* Column of the minimum value
+
+💥 (Hint: use `argmin()`, `argmax()`, axis combinations)
+
+---
+
+---
+
+# 📘 **Chapter 10 – NumPy Input/Output (Saving & Loading Data)**
+
+This chapter teaches you how to **save arrays to files** and **load them back**, an essential skill for:
+
+* Data pipelines
+* ETL workflows
+* Saving preprocessed datasets
+* Storing model weights
+* Handling large arrays efficiently
+
+Let’s go step by step 👇
+
+---
+
+# 🧠 1️⃣ Introduction to NumPy I/O
+
+NumPy supports multiple file formats:
+
+| Format          | Functions                         | Description                |
+| --------------- | --------------------------------- | -------------------------- |
+| `.npy`          | `np.save`, `np.load`              | Saves a single array       |
+| `.npz`          | `np.savez`, `np.savez_compressed` | Saves multiple arrays      |
+| `.txt` / `.csv` | `np.savetxt`, `np.loadtxt`        | Human-readable text format |
+
+---
+
+# 🧩 **Part A — Saving & Loading .npy Files**
+
+---
+
+## ⭐ 2️⃣ Saving a Single Array → `.npy`
+
+```python
+arr = np.array([10,20,30,40])
+np.save("my_array.npy", arr)
+```
+
+This creates a file named `my_array.npy`.
+
+---
+
+## ⭐ 3️⃣ Loading a `.npy` File
+
+```python
+loaded = np.load("my_array.npy")
+print(loaded)
+```
+
+Output:
+
+```
+[10 20 30 40]
+```
+
+✔ Fast
+✔ Preserves dtype and shape
+✔ Best for machine learning workflows
+
+---
+
+# 🧩 **Part B — Saving Multiple Arrays (.npz)**
+
+---
+
+## ⭐ 4️⃣ Save Multiple Arrays
+
+```python
+a = np.array([1,2,3])
+b = np.array([4,5,6])
+
+np.savez("multi_arrays.npz", first=a, second=b)
+```
+
+---
+
+## ⭐ 5️⃣ Load Multiple Arrays
+
+```python
+data = np.load("multi_arrays.npz")
+print(data["first"])
+print(data["second"])
+```
+
+---
+
+## ⭐ Optional: Compressed Version
+
+```python
+np.savez_compressed("compressed_arrays.npz", a=a, b=b)
+```
+
+✔ Saves disk space
+✔ Slower than normal save/load
+
+---
+
+# 🧩 **Part C — Saving & Loading Text Files (CSV, TXT)**
+
+---
+
+## ⭐ 6️⃣ Save Array to Text File
+
+```python
+arr = np.array([[10,20,30],
+                [40,50,60]])
+
+np.savetxt("data.txt", arr)
+```
+
+Default delimiter: space.
+
+---
+
+## ⭐ 7️⃣ Save CSV with delimiter
+
+```python
+np.savetxt("data.csv", arr, delimiter=",")
+```
+
+---
+
+## ⭐ 8️⃣ Load Data from Text/CSV
+
+```python
+loaded = np.loadtxt("data.csv", delimiter=",")
+print(loaded)
+```
+
+---
+
+## ⭐ 9️⃣ Saving with Custom Format
+
+```python
+np.savetxt("formatted.txt", arr, fmt="%d")
+```
+
+* `%d` → integer
+* `%.2f` → float with 2 decimals
+
+---
+
+# 🧩 **Part D — Reading Real Data (Important for Analysts)**
+
+You can load files that contain:
+
+* Numbers
+* Tabular data
+* Clean CSV with numeric values
+
+Example:
+
+```python
+data = np.loadtxt("sales.csv", delimiter=",")
+```
+
+❗ **If the file has header / text columns, use Pandas instead.**
+
+---
+
+# 🧩 **Part E — Binary vs Text Formats**
+
+| Format          | Pros                | Cons                  |
+| --------------- | ------------------- | --------------------- |
+| `.npy`          | Fast, full fidelity | Not human-readable    |
+| `.npz`          | Multiple arrays     | Zip overhead          |
+| `.txt` / `.csv` | Human-readable      | Slow, loses type info |
+
+---
+
+# 🧾 **Part F — Summary Table**
+
+| Task                   | Function                |
+| ---------------------- | ----------------------- |
+| Save array             | `np.save()`             |
+| Load array             | `np.load()`             |
+| Save multiple arrays   | `np.savez()`            |
+| Save compressed arrays | `np.savez_compressed()` |
+| Save text/csv          | `np.savetxt()`          |
+| Load text/csv          | `np.loadtxt()`          |
+
+---
+
+# 🧾 **Chapter 10 Practice Sheet**
+
+---
+
+## ✅ **Section A: .npy Files**
+
+1️⃣ Create `arr = np.arange(10)`
+
+* Save as `arr.npy`
+* Load it back and print
+
+---
+
+2️⃣ Create a 2×3 matrix
+Save and load it using `.npy`
+
+---
+
+## ✅ **Section B: Multiple Arrays**
+
+3️⃣ Save arrays:
+
+```python
+a = np.array([1,4,7])
+b = np.array([2,5,8])
+c = np.array([3,6,9])
+```
+
+into a **single `.npz` file** with keys `"x"`, `"y"`, `"z"`.
+
+Load them back and print the arrays.
+
+---
+
+4️⃣ Do the same using `np.savez_compressed`.
+
+---
+
+## ✅ **Section C: Text/CSV Files**
+
+5️⃣ Save:
+
+```python
+m = np.array([[10,20,30],
+              [40,50,60]])
+```
+
+to a file named `"matrix.csv"` using comma delimiter.
+
+Load the file back and verify.
+
+---
+
+6️⃣ Save the same matrix with formatting **as integers** using:
+
+```python
+fmt="%d"
+```
+
+---
+
+## ✅ **Section D: Real Data Reading**
+
+7️⃣ Use `np.loadtxt()` to load:
+
+```
+1,2,3
+4,5,6
+7,8,9
+```
+
+into a NumPy array.
+(Hint: delimiter=",")
+
+---
+
+## 🎯 **Challenge Problems**
+
+8️⃣ Given monthly rainfall:
+
+```python
+rain = np.array([80,120,100,90,140,150])
+```
+
+Save into:
+
+* `rain.npy`
+* `rain.csv`
+
+Load both and ensure values match.
+
+---
+
+9️⃣ Create two 3×3 matrices, save to `.npz`, reload, and compute:
+
+* Sum of both matrices
+* Element-wise multiplication
+
+---
+
+# 📘 **Chapter 11 – Broadcasting (Deep Dive)**
+
+Broadcasting is the *reason* NumPy is so powerful and fast.
+Master this, and you’ll understand **vectorization**, **matrix math**, and **data transformations** like a pro.
+
+Let's begin 👇
+
+---
+
+# 🧠 **1️⃣ What is Broadcasting?**
+
+Broadcasting allows NumPy to perform operations on arrays of **different shapes** by **automatically expanding** the smaller array *without actually copying data*.
+
+👉 This avoids loops
+👉 Makes code fast
+👉 Reduces memory usage
+
+### Real-world analogy:
+
+Just like Excel applies a formula down a column, NumPy applies operations across arrays of compatible shapes.
+
+---
+
+# 🧩 **2️⃣ Basic Example**
+
+```python
+a = np.array([1, 2, 3])
+b = 10
+
+print(a + b)
+```
+
+Output:
+
+```
+[11 12 13]
+```
+
+Scalar **10** is broadcast across all elements.
+
+---
+
+# 🧩 **3️⃣ Broadcasting Rules (Super Important)**
+
+NumPy compares shapes **right to left** (from last dimension).
+
+Two dimensions are compatible if:
+
+| Rule                 | Meaning        |
+| -------------------- | -------------- |
+| **Same size**        | Example: 5 & 5 |
+| **One of them is 1** | Example: 1 & 5 |
+
+If all dimensions match or can be broadcast, operation is allowed.
+
+---
+
+# 🧮 **4️⃣ Broadcasting Examples**
+
+---
+
+## ⭐ Example 1: Vector + Scalar
+
+```python
+arr = np.array([1,2,3])
+print(arr + 5)
+```
+
+Result:
+
+```
+[6 7 8]
+```
+
+---
+
+## ⭐ Example 2: 2D Matrix + 1D Vector
+
+```python
+a = np.array([[1,2,3],
+              [4,5,6]])
+
+b = np.array([10,20,30])
+
+print(a + b)
+```
+
+Output:
+
+```
+[[11 22 33]
+ [14 25 36]]
+```
+
+✔ Shape of `a`: (2,3)
+✔ Shape of `b`: (3,)
+✔ Expand `b` to (1,3) → (2,3)
+
+---
+
+## ⭐ Example 3: Column Vector + Row Vector
+
+```python
+col = np.array([[1],
+                [2],
+                [3]])
+
+row = np.array([10,20,30])
+
+print(col + row)
+```
+
+Output:
+
+```
+[[11 21 31]
+ [12 22 32]
+ [13 23 33]]
+```
+
+✔ Shapes:
+
+* col = (3,1)
+* row = (3,) → broadcast to (1,3)
+
+Result shape: (3,3)
+
+---
+
+## ⭐ Example 4: 2D + 1D Column Vector
+
+```python
+a = np.array([[1,2,3],
+              [4,5,6]])
+
+b = np.array([[10],
+              [20]])
+
+print(a + b)
+```
+
+Output:
+
+```
+[[11 12 13]
+ [24 25 26]]
+```
+
+✔ b: (2,1) → broadcast horizontally to (2,3)
+
+---
+
+# 🧠 **5️⃣ Broadcasting Failure (Shapes NOT compatible)**
+
+```python
+a = np.array([[1,2,3],
+              [4,5,6]])
+
+b = np.array([10,20])
+```
+
+Shapes:
+
+* a = (2,3)
+* b = (2,)
+
+Compare last dims → 3 vs 2 ❌
+Cannot broadcast → ERROR.
+
+---
+
+# 🧮 **6️⃣ Using Broadcasting in Real Analytics**
+
+---
+
+## ✔ Add column means to each row
+
+```python
+arr = np.array([[10,20,30],
+                [40,50,60]])
+
+col_mean = arr.mean(axis=1).reshape(2,1)
+print(arr - col_mean)
+```
+
+---
+
+## ✔ Normalize each column (subtract column mean)
+
+```python
+col_mean = arr.mean(axis=0)
+print(arr - col_mean)
+```
+
+---
+
+## ✔ Feature scaling using broadcasting
+
+```python
+scaled = (arr - arr.min(axis=0)) / (arr.max(axis=0) - arr.min(axis=0))
+```
+
+Used in ML preprocessing.
+
+---
+
+# 🧾 **7️⃣ Summary Table**
+
+| Operation     | Allowed? | Reason                   |
+| ------------- | -------- | ------------------------ |
+| (3,) + (3,)   | ✔        | Same size                |
+| (3,1) + (1,3) | ✔        | Expand both sides        |
+| (4,3) + (3,)  | ✔        | Second expands to (1,3)  |
+| (4,3) + (2,)  | ❌        | 3 ≠ 2                    |
+| Scalar + Any  | ✔        | Scalar always broadcasts |
+
+---
+
+# 🧾 **Chapter 11 Practice Sheet**
+
+---
+
+## ✅ **Section A: Basics**
+
+1️⃣ Given:
+
+```python
+a = np.array([1,2,3])
+```
+
+Compute:
+
+* `a + 10`
+* `a * 5`
+
+---
+
+2️⃣ Given:
+
+```python
+m = np.array([[1,2,3],
+              [4,5,6]])
+v = np.array([10,20,30])
+```
+
+Perform `m + v`.
+
+---
+
+## ✅ **Section B: Row & Column Broadcasting**
+
+3️⃣ Using:
+
+```python
+m = np.array([[3,6,9],
+              [2,4,6],
+              [1,5,7]])
+```
+
+Compute:
+
+* subtract the **row means**
+* subtract the **column means**
+
+(Hint: reshape row means to (3,1))
+
+---
+
+4️⃣ Add this column vector to the matrix:
+
+```python
+col = np.array([[5],
+                [10],
+                [15]])
+```
+
+Result of `m + col` ?
+
+---
+
+## ✅ **Section C: Compatibility Check**
+
+5️⃣ Are these shapes broadcastable?
+
+| A     | B     | Yes/No |
+| ----- | ----- | ------ |
+| (4,3) | (3,)  | ?      |
+| (3,1) | (3,3) | ?      |
+| (2,3) | (2,)  | ?      |
+| (5,4) | (1,4) | ?      |
+
+---
+
+## ✅ **Section D: Real-world Problems**
+
+6️⃣ Given scores per subject:
+
+```python
+scores = np.array([[70,80,90],
+                   [60,85,75],
+                   [88,92,79]])
+```
+
+Normalize:
+
+* by row
+* by column
+
+---
+
+7️⃣ Temperature data for 7 days (3 cities):
+
+```python
+temps = np.array([[30,32,34],
+                  [28,35,33],
+                  [31,30,29],
+                  [33,34,32],
+                  [29,28,31],
+                  [27,26,30],
+                  [32,33,34]])
+```
+
+Task:
+
+* subtract the **daily mean**
+* subtract the **city-wise mean** (column mean)
+
+---
+
+## 🎯 **Challenge Zone**
+
+8️⃣ Given:
+
+```python
+sales = np.arange(1,13).reshape(3,4)
+```
+
+Subtract:
+
+* each row’s minimum
+* each column’s maximum
+
+Output both.
+
+---
+
+9️⃣ Given 3D array:
+
+```python
+a = np.random.randint(1,10,(2,3,3))
+b = np.array([1,2,3])
+```
+
+Perform `a + b`.
+
+👉 Explain how broadcasting works across 3D.
+
+---
+
+---
+
+# 📘 **Chapter 12 – Advanced NumPy (Structured Arrays, Views, Strides, Performance)**
+
+This chapter covers:
+
+* Structured Arrays
+* RecArray
+* Strides
+* Memory layout (C vs Fortran order)
+* Vectorization tricks
+* Performance optimizations
+* Broadcasting at memory level
+* Avoiding slow Python loops
+
+Let’s begin 👇
+
+---
+
+# 🧠 **1️⃣ Structured Arrays (Like SQL Tables)**
+
+Structured arrays allow multiple **named columns**, each with its own dtype (similar to a table).
+
+### ➤ Example: Create a structured array
+
+```python
+data = np.array([
+    (1, 'Deepak', 80.4),
+    (2, 'Rahul', 75.2),
+], dtype=[('id', 'i4'), ('name', 'U10'), ('weight', 'f4')])
+
+print(data)
+```
+
+Output:
+
+```
+[(1, 'Deepak', 80.4) (2, 'Rahul', 75.2)]
+```
+
+---
+
+## ⭐ Access by column name:
+
+```python
+data['name']
+```
+
+Output:
+
+```
+array(['Deepak', 'Rahul'], dtype='<U10')
+```
+
+---
+
+## ⭐ Filter like SQL:
+
+```python
+data[data['weight'] > 77]
+```
+
+---
+
+### ✔ Useful when Pandas is not available
+
+### ✔ Used in high-performance scientific code
+
+---
+
+# 🧩 **2️⃣ Record Arrays (recarray)**
+
+These allow attribute-style access:
+
+```python
+rec = data.view(np.recarray)
+print(rec.name)
+```
+
+Equivalent to `data['name']`.
+
+---
+
+# 🧠 **3️⃣ Memory Layout: C-order vs F-order**
+
+NumPy arrays can be stored in:
+
+| Order | Meaning      | Language       |
+| ----- | ------------ | -------------- |
+| `C`   | Row-major    | Python/C       |
+| `F`   | Column-major | MATLAB/Fortran |
+
+### Creating arrays in Fortran order:
+
+```python
+arr = np.array([[1,2,3],
+                [4,5,6]], order='F')
+```
+
+Check memory layout:
+
+```python
+arr.flags
+```
+
+✔ Important for performance in matrix operations.
+
+---
+
+# 🧠 **4️⃣ Strides (Most Powerful Concept)**
+
+Strides = number of bytes to step in each dimension.
+
+```python
+a = np.array([[1,2,3],
+              [4,5,6]])
+
+print(a.strides)
+```
+
+Example output:
+
+```
+(24, 8)
+```
+
+Meaning:
+
+* Move down a row → +24 bytes
+* Move right 1 col → +8 bytes
+
+---
+
+## Why strides matter?
+
+Because slicing uses **views**, not copies → FAST.
+
+```python
+b = a[:, ::2]    # stride jump
+```
+
+NumPy does NOT copy — just reinterprets memory.
+
+---
+
+# 🔥 **5️⃣ Vectorization – Avoid Python Loops**
+
+BAD (slow):
+
+```python
+out = []
+for x in arr:
+    out.append(x * 2)
+```
+
+GOOD (vectorized):
+
+```python
+out = arr * 2
+```
+
+20–200x faster.
+
+---
+
+# 🧩 **6️⃣ Advanced Broadcasting (Memory-Level)**
+
+When you do:
+
+```python
+a + b
+```
+
+NumPy doesn’t duplicate `b`, it creates a **new view** by adjusting the strides to broadcast across dimensions.
+
+### Example:
+
+```python
+b = np.array([1,2,3])
+np.broadcast_to(b, (2,3))
+```
+
+Output:
+
+```
+[[1 2 3]
+ [1 2 3]]
+```
+
+But memory NOT duplicated.
+
+---
+
+# 🚀 **7️⃣ Performance Tricks**
+
+### ✔ Use vectorization (avoid loops)
+
+### ✔ Use `np.where` instead of Python if/else
+
+```python
+np.where(arr > 10, 1, 0)
+```
+
+### ✔ Use `np.broadcast_to` for repeated patterns
+
+### ✔ Use `astype()` carefully — it makes copies
+
+### ✔ Use in-place ops to save memory
+
+```python
+arr += 5
+```
+
+### ✔ Use `np.dot`, `@`, `matmul` for matrix multiplication
+
+---
+
+# 🧩 **8️⃣ Random Module (Advanced Use)**
+
+Vectorized random generation:
+
+```python
+np.random.randint(1, 100, size=(1_000_000,))
+```
+
+Much faster than Python `random`.
+
+---
+
+# 🔧 **9️⃣ Multidimensional Iteration (Avoid if Possible)**
+
+NumPy provides `np.nditer`, but avoid unless needed.
+
+```python
+for x in np.nditer(arr):
+    print(x)
+```
+
+Used only when vectorization is impossible.
+
+---
+
+# 🧾 **10️⃣ Summary Table**
+
+| Topic             | Key Idea                       |
+| ----------------- | ------------------------------ |
+| Structured arrays | SQL-like columns               |
+| RecArray          | Attribute-style access         |
+| Strides           | How memory is traversed        |
+| C vs F order      | Row-major vs column-major      |
+| Vectorization     | Replace loops                  |
+| Broadcasting      | Fast expansion without copying |
+| In-place ops      | Save memory & time             |
+| np.broadcast_to   | Reinterpret memory             |
+
+---
+
+# 🧾 **Chapter 12 Practice Sheet**
+
+---
+
+## ✅ **Section A: Structured Arrays**
+
+1️⃣ Create a structured array with fields:
+
+* name (string)
+* age (int)
+* salary (float)
+
+Add 3 rows.
+
+2️⃣ Extract only the names.
+
+3️⃣ Filter employees where salary > 60,000.
+
+---
+
+## ✅ **Section B: Record Arrays**
+
+4️⃣ Convert the structured array into a `recarray` and access columns using attributes (`rec.salary`).
+
+---
+
+## ✅ **Section C: Strides**
+
+5️⃣ Create:
+
+```python
+a = np.arange(12).reshape(3,4)
+```
+
+Print its:
+
+* shape
+* strides
+* dtype
+
+Then slice it:
+
+```python
+b = a[:, ::2]
+```
+
+Print b’s strides.
+
+---
+
+## ✅ **Section D: Memory Layout**
+
+6️⃣ Create a matrix using `order='F'` and another using `order='C'`.
+Compare their flags.
+
+---
+
+## ✅ **Section E: Broadcasting & Vectorization**
+
+7️⃣ Vectorize the expression:
+
+```
+For each value x:
+If x is even → x/2
+If x is odd → x*2
+```
+
+(Hint: use `np.where()`)
+
+---
+
+8️⃣ Broadcast a column vector of shape (3,1) across a matrix of shape (3,4) and add them.
+
+---
+
+## 🎯 **Challenge Zone**
+
+9️⃣ Given sales = np.arange(1,25).reshape(4,6)
+Subtract:
+
+* row means
+* column max values
+
+---
+
+🔟 Create a 3D array of shape (2,3,4).
+Add a 1D array `[10,20,30,40]` across the last dimension using broadcasting.
+
+Explain why this works using shape rules.
+
+---
+
+
+# 📙 **Chapter 13 – NumPy ↔ Pandas Bridge (How NumPy Skills Transfer to Pandas)**
+
+This chapter connects everything you learned in NumPy to Pandas — the library you will use **daily** in analytics.
+
+Understanding this bridge gives you:
+
+* Faster learning curve in Pandas
+* Better understanding of DataFrame behavior
+* Awareness of hidden NumPy operations inside Pandas
+* Ability to optimize Pandas operations
+
+Let’s go step by step 👇
+
+---
+
+# 🧠 **1️⃣ Relationship Between Pandas & NumPy**
+
+Pandas is **built on top of NumPy**.
+
+* A DataFrame column = **NumPy array**
+* Pandas operations = **vectorized NumPy ops**
+* Missing values use NumPy's NaN
+* Indexing rules inspired by NumPy
+* Broadcasting works same way
+
+So → **Master NumPy = Faster Pandas mastery**
+
+---
+
+# 🧩 **2️⃣ DataFrame Columns Are NumPy Arrays**
+
+```python
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame({
+    "age": np.array([20,25,30]),
+    "score": np.array([88,92,95])
+})
+```
+
+Check type:
+
+```python
+df["age"].values
+```
+
+Output:
+
+```
+array([20, 25, 30])
+```
+
+---
+
+# 🧩 **3️⃣ Vectorized Ops in Pandas = NumPy Ops**
+
+### NumPy:
+
+```python
+arr = np.array([1,2,3])
+arr * 10
+```
+
+### Pandas:
+
+```python
+df["age"] * 10
+```
+
+Both output:
+
+```
+[10,20,30]
+```
+
+✔ No loops
+✔ Fast
+✔ Vectorized
+
+---
+
+# 🧩 **4️⃣ Boolean Filtering (Similar to NumPy)**
+
+### NumPy:
+
+```python
+arr[arr > 20]
+```
+
+### Pandas:
+
+```python
+df[df["age"] > 20]
+```
+
+✔ Same concept
+✔ Condition returns boolean array
+✔ Used as mask
+
+---
+
+# 🧩 **5️⃣ Broadcasting in Pandas**
+
+Works exactly like NumPy.
+
+Example:
+
+```python
+df = pd.DataFrame({
+    "A": [10,20,30],
+    "B": [40,50,60]
+})
+
+df + 5
+```
+
+Output:
+
+```
+    A   B
+0  15  45
+1  25  55
+2  35  65
+```
+
+Scalar broadcast → every cell.
+
+---
+
+## Broadcasting row-wise
+
+```python
+row = np.array([1,2])
+df + row
+```
+
+✔ Works because `row` shape = (2,)
+✔ Broadcast across columns
+
+---
+
+## Broadcasting column-wise
+
+```python
+col = np.array([[5],[10],[15]])
+df + col
+```
+
+✔ Works same as NumPy (3×1 broadcast across 3×2)
+
+---
+
+# 🧩 **6️⃣ Index Alignment (Pandas Upgrade)**
+
+Pandas adds something NumPy doesn’t have:
+
+👉 Index & column alignment
+
+### Example:
+
+```python
+df1 = pd.DataFrame({"A":[1,2,3]})
+df2 = pd.DataFrame({"A":[10,20]})
+```
+
+Doing:
+
+```python
+df1 + df2
+```
+
+Pandas aligns rows before adding:
+
+```
+     A
+0  11
+1  22
+2  NaN
+```
+
+NumPy would error if shapes mismatch.
+
+---
+
+# 🧩 **7️⃣ Similarities in Indexing**
+
+### NumPy:
+
+```python
+arr[0,1]
+```
+
+### Pandas:
+
+```python
+df.iloc[0,1]
+```
+
+---
+
+### NumPy Boolean mask:
+
+```python
+arr[arr > 10]
+```
+
+### Pandas:
+
+```python
+df[df["col"] > 10]
+```
+
+---
+
+### NumPy slicing:
+
+```python
+arr[1:4]
+```
+
+### Pandas slicing:
+
+```python
+df.iloc[1:4]
+```
+
+---
+
+# 🧩 **8️⃣ Converting Between NumPy and Pandas**
+
+### ➤ Pandas → NumPy
+
+```python
+df.values        # NumPy array
+df.to_numpy()    # Recommended way
+```
+
+---
+
+### ➤ NumPy → Pandas
+
+```python
+pd.DataFrame(np.arange(6).reshape(2,3))
+```
+
+---
+
+# 🧩 **9️⃣ Aggregations (Same Logic)**
+
+NumPy:
+
+```python
+arr.mean(axis=0)
+```
+
+Pandas:
+
+```python
+df.mean(axis=0)
+```
+
+Both perform column-wise means by default.
+
+Similarly for:
+
+* `sum()`
+* `min()`
+* `max()`
+* `std()`
+* `var()`
+
+---
+
+# 🧩 **🔟 Real-world Example**
+
+Dataset:
+
+```python
+df = pd.DataFrame({
+    "math": [70,80,90],
+    "science": [60,75,85],
+    "english": [88,92,95]
+})
+```
+
+## Row-wise mean:
+
+```python
+df.mean(axis=1)
+```
+
+## Column-wise mean:
+
+```python
+df.mean(axis=0)
+```
+
+NumPy equivalent:
+
+```python
+df.to_numpy().mean(axis=1)
+```
+
+---
+
+# 🧾 **🔟 Summary Table (NumPy → Pandas Mapping)**
+
+| Concept          | NumPy         | Pandas                     |
+| ---------------- | ------------- | -------------------------- |
+| Access value     | `a[i,j]`      | `df.iloc[i,j]`             |
+| Get column       | N/A           | `df["col"]`                |
+| Boolean filter   | `a[a>10]`     | `df[df["col"]>10]`         |
+| Row slice        | `a[1:4]`      | `df.iloc[1:4]`             |
+| Column slice     | N/A           | `df.loc[:, "col1":"col3"]` |
+| Mean (cols)      | `arr.mean(0)` | `df.mean(0)`               |
+| Broadcasting     | ✔             | ✔ (with index alignment)   |
+| Convert to NumPy | Already np    | `df.to_numpy()`            |
+
+---
+
+# 🧾 **Chapter 13 Practice Sheet**
+
+---
+
+## ✅ **Section A: Basics**
+
+1️⃣ Convert a NumPy array `np.arange(6).reshape(2,3)` into a pandas DataFrame.
+
+2️⃣ Convert DataFrame back to NumPy.
+
+---
+
+## ✅ **Section B: Vectorization**
+
+3️⃣ Given:
+
+```python
+df = pd.DataFrame({
+    "age": [20,25,30,35],
+    "salary": [40,50,60,70]
+})
+```
+
+Compute:
+
+* age * 2
+* salary + 100
+* salary / age
+
+Do it using Pandas vectorization.
+
+---
+
+## ✅ **Section C: Boolean Filtering**
+
+4️⃣ Filter rows where:
+
+* age > 25
+* salary >= 60
+
+---
+
+## ✅ **Section D: Broadcasting**
+
+5️⃣ Add a row vector `[1,2]` to:
+
+```python
+df = pd.DataFrame({
+    "A":[10,20],
+    "B":[30,40]
+})
+```
+
+6️⃣ Add a column vector `[[5],[10]]` to the same DataFrame.
+
+---
+
+## ✅ **Section E: Aggregations**
+
+7️⃣ For:
+
+```python
+df = pd.DataFrame({
+    "math":[80,90,70],
+    "science":[60,75,65],
+    "english":[85,95,92]
+})
+```
+
+Find:
+
+* row-wise mean
+* column-wise sum
+* highest scoring subject per row (`idxmax(axis=1)`)
+
+---
+
+## 🎯 **Challenge Zone**
+
+8️⃣ Using a DataFrame of 5 students with 3 subjects each:
+
+* Normalize each column (subtract col mean & divide by col std)
+* Compute total marks per student
+* Filter top 2 students
+
+---
+
+# 📘 **Chapter 14 – Matrix & Linear Algebra in NumPy**
+
+This chapter covers:
+
+* Matrix creation
+* Dot product
+* Matrix multiplication (`@`, `matmul`)
+* Transpose
+* Determinant
+* Inverse
+* Rank
+* Eigenvalues & eigenvectors
+* Solving linear equations
+
+Let’s dive in 👇
+
+---
+
+# 🧠 **1️⃣ What is Linear Algebra in NumPy?**
+
+NumPy includes a submodule:
+
+```python
+np.linalg
+```
+
+It contains linear algebra functions optimized in C/Fortran → **super fast**.
+
+You’ll use these concepts in:
+
+* Regression models
+* PCA
+* Machine Learning
+* Optimization
+* Transformations
+* Recommendation systems
+
+---
+
+# 🧩 **2️⃣ Matrix Creation**
+
+A matrix is just a 2D NumPy array:
+
+```python
+A = np.array([[1,2,3],
+              [4,5,6]])
+```
+
+Shape:
+
+```python
+A.shape   # (2,3)
+```
+
+---
+
+# 🎯 **3️⃣ Matrix Transpose**
+
+```python
+A.T
+```
+
+Transpose flips rows ↔ columns.
+
+---
+
+# 🧮 **4️⃣ Dot Product (Vector • Vector)**
+
+```python
+a = np.array([1,2,3])
+b = np.array([4,5,6])
+
+np.dot(a,b)
+```
+
+Calculation:
+
+```
+1*4 + 2*5 + 3*6 = 32
+```
+
+---
+
+# 🔢 **5️⃣ Matrix Multiplication**
+
+There are 3 ways:
+
+### ✔ Method 1: `np.dot()`
+
+```python
+np.dot(A, B)
+```
+
+### ✔ Method 2: `@` operator (recommended)
+
+```python
+A @ B
+```
+
+### ✔ Method 3: `np.matmul()`
+
+```python
+np.matmul(A, B)
+```
+
+---
+
+## Example:
+
+```python
+A = np.array([[1,2],
+              [3,4]])
+
+B = np.array([[5,6],
+              [7,8]])
+
+A @ B
+```
+
+Output:
+
+```
+[[19 22]
+ [43 50]]
+```
+
+---
+
+# 🧩 **6️⃣ Identity Matrix**
+
+```python
+np.eye(3)
+```
+
+Output:
+
+```
+[[1 0 0]
+ [0 1 0]
+ [0 0 1]]
+```
+
+---
+
+# 📐 **7️⃣ Determinant**
+
+```python
+np.linalg.det(A)
+```
+
+For matrix:
+
+```python
+[[1 2]
+ [3 4]]
+```
+
+Det = -2.
+
+---
+
+# 🧮 **8️⃣ Inverse of Matrix**
+
+Only for square matrices.
+
+```python
+np.linalg.inv(A)
+```
+
+Example:
+
+```python
+A = np.array([[1,2],
+              [3,4]])
+
+np.linalg.inv(A)
+```
+
+Output:
+
+```
+[[-2.   1. ]
+ [ 1.5 -0.5]]
+```
+
+Check:
+
+```python
+A @ np.linalg.inv(A)
+```
+
+Result ≈ Identity matrix.
+
+---
+
+# 📊 **9️⃣ Matrix Rank**
+
+```python
+np.linalg.matrix_rank(A)
+```
+
+Rank = number of independent rows/columns.
+
+---
+
+# 🧮 **🔟 Solving Linear Equations**
+
+Solve system:
+
+```
+Ax = b
+```
+
+Example:
+
+```
+2x + y = 5
+x + 3y = 6
+```
+
+```python
+A = np.array([[2,1],
+              [1,3]])
+
+b = np.array([5,6])
+
+x = np.linalg.solve(A, b)
+```
+
+Output:
+
+```
+[1.4 1.2]
+```
+
+---
+
+# 🔬 **1️⃣1️⃣ Eigenvalues & Eigenvectors**
+
+Used in PCA, advanced ML, dimensionality reduction.
+
+```python
+np.linalg.eig(A)
+```
+
+Returns:
+
+* eigenvalues
+* eigenvectors
+
+Example:
+
+```python
+A = np.array([[2,1],
+              [1,2]])
+
+vals, vecs = np.linalg.eig(A)
+```
+
+Output:
+
+```
+Eigenvalues: [3 1]
+Eigenvectors:
+[[ 0.71 -0.71]
+ [ 0.71  0.71]]
+```
+
+---
+
+# 🧾 **1️⃣2️⃣ Summary Table**
+
+| Concept               | Function                  |
+| --------------------- | ------------------------- |
+| Transpose             | `A.T`                     |
+| Dot Product           | `np.dot()`                |
+| Matrix Multiplication | `A @ B`, `np.matmul()`    |
+| Identity Matrix       | `np.eye()`                |
+| Determinant           | `np.linalg.det()`         |
+| Inverse               | `np.linalg.inv()`         |
+| Rank                  | `np.linalg.matrix_rank()` |
+| Solve Ax = b          | `np.linalg.solve()`       |
+| Eigenvalues           | `np.linalg.eig()`         |
+
+---
+
+# 🧾 **Chapter 14 Practice Sheet**
+
+---
+
+## ✅ **Section A: Basics**
+
+1️⃣ Create:
+
+```python
+A = np.array([[1,2,3],
+              [4,5,6]])
+```
+
+* Print A.T
+* Multiply A by 5 using broadcasting
+
+---
+
+## ✅ **Section B: Dot & Matrix Multiply**
+
+2️⃣ Dot product:
+
+```python
+a = np.array([1,3,5])
+b = np.array([2,4,6])
+```
+
+3️⃣ Matrix multiply:
+
+```python
+A = np.array([[2,0],
+              [1,3]])
+B = np.array([[4,5],
+              [6,7]])
+```
+
+Compute `A @ B`.
+
+---
+
+## ✅ **Section C: Determinant, Inverse, Rank**
+
+4️⃣ For:
+
+```python
+A = np.array([[1,2],
+              [3,4]])
+```
+
+Find:
+
+* det
+* inverse
+* rank
+
+---
+
+## ✅ **Section D: Solve System of Equations**
+
+Solve:
+
+```
+3x + y = 9
+2x + 4y = 12
+```
+
+---
+
+## ✅ **Section E: Eigenvalues**
+
+Find eigenvalues & eigenvectors of:
+
+```python
+A = np.array([[4,2],
+              [1,3]])
+```
+
+---
+
+# 🎯 **Challenge Zone**
+
+7️⃣ Compute:
+
+```
+(A @ B) @ C
+```
+
+Where:
+
+```python
+A = np.eye(3)
+B = np.arange(9).reshape(3,3)
+C = np.array([[1,0,1],
+              [2,1,0],
+              [0,1,2]])
+```
+
+---
+
+8️⃣ Use NumPy to check if a matrix is **invertible**
+(Hint: det ≠ 0)
+
+---
+
+9️⃣ Create a random 5×5 matrix and:
+
+* compute inverse
+* multiply with original
+* verify if result is approx identity matrix using `np.allclose()`
+
+---
+
+# 📘 **Chapter 15 – Real Data Analysis Exercises (NumPy + Pandas Together)**
+
+This chapter teaches you how both libraries combine to solve **real business problems**, just like in DA interviews and real job tasks.
+
+You will learn:
+
+* Data cleaning
+* Missing value handling
+* Feature engineering
+* Grouping & aggregations
+* KPI calculations
+* Case studies
+* Row-wise & column-wise operations
+* Merging datasets
+* Using NumPy logic inside Pandas
+
+Let’s begin 👇
+
+---
+
+# 🧠 **1️⃣ Data Cleaning with NumPy + Pandas**
+
+Dataset:
+
+```python
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame({
+    'name': ['Amit', 'Neha', 'Ravi', 'Sara', None],
+    'age': [25, np.nan, 35, 40, 50],
+    'salary': [50000, 70000, None, 90000, 85000],
+    'city': ['Delhi', 'Mumbai', 'Delhi', None, 'Chennai']
+})
+```
+
+---
+
+## ⭐ Missing Value Detection
+
+```python
+df.isna()
+df.isna().sum()
+```
+
+---
+
+## ⭐ Fill Missing Values
+
+### Using constant:
+
+```python
+df['salary'] = df['salary'].fillna(0)
+```
+
+### Using mean:
+
+```python
+df['age'] = df['age'].fillna(df['age'].mean())
+```
+
+---
+
+## ⭐ Drop rows with missing values
+
+```python
+df.dropna()
+```
+
+---
+
+# 🧩 **2️⃣ NumPy + Pandas for Conditional Columns**
+
+Create new columns using vectorized logic:
+
+```python
+df['seniority'] = np.where(df['age'] > 40, 'Senior', 'Junior')
+```
+
+Another example:
+
+```python
+df['high_salary'] = np.where(df['salary'] > 80000, 1, 0)
+```
+
+---
+
+# 🧩 **3️⃣ Grouping & Aggregations**
+
+Sales dataset:
+
+```python
+sales = pd.DataFrame({
+    'region': ['North','South','East','West','North','South'],
+    'sales': [200,300,150,400,350,250],
+    'profit': [20,30,15,35,40,22]
+})
+```
+
+### Group by region:
+
+```python
+sales.groupby('region')['sales'].sum()
+```
+
+### Multiple aggregations:
+
+```python
+sales.groupby('region').agg({
+    'sales':['sum','mean'],
+    'profit':'max'
+})
+```
+
+---
+
+# 🧩 **4️⃣ Feature Engineering**
+
+### Profit margin:
+
+```python
+sales['margin'] = sales['profit'] / sales['sales']
+```
+
+### Log-transform:
+
+```python
+sales['log_sales'] = np.log(sales['sales'])
+```
+
+---
+
+# 🧩 **5️⃣ Row-wise Operations**
+
+Use `.sum(axis=1)`:
+
+Marks dataset:
+
+```python
+marks = pd.DataFrame({
+    'math': [70,80,90],
+    'science':[60,75,85],
+    'english':[88,92,95]
+})
+```
+
+Total marks:
+
+```python
+marks['total'] = marks.sum(axis=1)
+```
+
+Percentage:
+
+```python
+marks['percent'] = marks['total'] / 300 * 100
+```
+
+---
+
+# 🧩 **6️⃣ Merging Datasets**
+
+```python
+customers = pd.DataFrame({
+    'id':[1,2,3],
+    'name':['A','B','C']
+})
+
+orders = pd.DataFrame({
+    'id':[1,1,3],
+    'order_amt':[200,300,400]
+})
+```
+
+Merge:
+
+```python
+pd.merge(customers, orders, on='id', how='left')
+```
+
+---
+
+# 🧩 **7️⃣ Using NumPy Functions Inside Pandas**
+
+Normalizing each column:
+
+```python
+df = pd.DataFrame(np.random.randint(1,100,(5,3)), columns=['A','B','C'])
+
+df = (df - df.mean()) / df.std()
+```
+
+Percentile cutoffs:
+
+```python
+q75 = np.percentile(df['A'], 75)
+```
+
+Broadcasting row-wise:
+
+```python
+df + np.array([1,2,3])
+```
+
+---
+
+# 🧩 **8️⃣ Real Case Study — Sales KPI Analysis**
+
+Dataset:
+
+```python
+sales = pd.DataFrame({
+    'month':['Jan','Jan','Feb','Feb','Mar','Mar'],
+    'region':['North','South','North','South','North','South'],
+    'revenue':[100,150,200,100,250,200]
+})
+```
+
+---
+
+### KPI 1: Total Revenue per Region
+
+```python
+sales.groupby('region')['revenue'].sum()
+```
+
+---
+
+### KPI 2: Monthly Growth
+
+Convert month to numeric:
+
+```python
+month_map = {'Jan':1,'Feb':2,'Mar':3}
+sales['month_num'] = sales['month'].map(month_map)
+```
+
+Sort:
+
+```python
+sales.sort_values('month_num', inplace=True)
+```
+
+Calculate month-wise total:
+
+```python
+monthly = sales.groupby('month_num')['revenue'].sum()
+```
+
+Growth:
+
+```python
+growth = monthly.pct_change()
+```
+
+---
+
+### KPI 3: Region with Highest Avg Revenue
+
+```python
+sales.groupby('region')['revenue'].mean().idxmax()
+```
+
+---
+
+# 🧾 **9️⃣ Summary Table**
+
+| Task                | Pandas             | NumPy Involvement  |
+| ------------------- | ------------------ | ------------------ |
+| Missing values      | `isna()`, fillna() | np.nan             |
+| Conditional columns | np.where           | vectorized logic   |
+| Grouping            | groupby            | aggregated arrays  |
+| Feature engineering | new columns        | elementwise ops    |
+| Row-wise ops        | sum(axis=1)        | NumPy axis logic   |
+| Broadcasting        | df + vector        | NumPy broadcasting |
+| Merging             | merge()            | —                  |
+| KPI metrics         | groupby + np       | percentiles, logs  |
+
+---
+
+# 🧾 **Chapter 15 Practice Sheet**
+
+---
+
+## ✅ **Section A: Cleaning**
+
+1️⃣ Load:
+
+```python
+df = pd.DataFrame({
+    'name':['A','B','C','D'],
+    'age':[20, np.nan, 30, 40],
+    'income':[50000,60000,np.nan,80000]
+})
+```
+
+Tasks:
+
+* Fill age with mean
+* Fill income with 0
+* Create column “category” → age>30 → “Senior” else “Junior”
+
+---
+
+## ✅ **Section B: Grouping**
+
+2️⃣ Given:
+
+```python
+orders = pd.DataFrame({
+    'cust':['A','A','B','C','C','C'],
+    'amount':[100,200,50,80,120,150]
+})
+```
+
+Find:
+
+* total amount per customer
+* max amount per customer
+* customer with highest total
+
+---
+
+## ✅ **Section C: Feature Engineering**
+
+3️⃣ Add:
+
+* running total of amounts
+* % share of amount per customer
+
+---
+
+## ✅ **Section D: Merging**
+
+4️⃣ Merge:
+
+```python
+cust = pd.DataFrame({'id':[1,2,3],'name':['X','Y','Z']})
+sales = pd.DataFrame({'id':[1,1,3],'amt':[200,300,150]})
+```
+
+Perform:
+
+* left join
+* inner join
+
+---
+
+## 🎯 **Challenge Zone**
+
+5️⃣ Create a student marks DataFrame of 10 rows and 3 subjects (random values).
+Tasks:
+
+* total marks
+* percentage
+* topper (idxmax)
+* normalize columns
+* find students scoring above 90 percentile
+
+---
+
+6️⃣ Create an ecommerce dataset (random):
+
+* product
+* category
+* price
+* quantity
+
+Calculate:
+
+* total revenue per category
+* highest priced product
+* avg price per category
+* products above mean price
+
+---
+
+
+Here is your:
+
+# 📘 **Chapter 16 – End-to-End Mini Project
+
+(NumPy + Pandas + EDA + KPIs + Visualizations + Insights)**
+
+We will simulate a real business case that covers:
+
+✔ Data cleaning
+✔ NumPy transformations
+✔ Pandas operations
+✔ KPI definition & calculations
+✔ EDA charts
+✔ Business insights
+
+---
+
+# 🏢 **Project: Sales Performance Analysis for an E-commerce Company**
+
+## 🎯 Business Problem
+
+The company wants to understand:
+
+* Which products are performing well
+* Which categories are most profitable
+* Customer buying patterns
+* Monthly trends
+* KPIs like revenue, profit margin, AOV
+
+You will act as a **data analyst** and prepare insights.
+
+---
+
+# 📥 **Step 1 — Create the Dataset**
+
+```python
+import pandas as pd
+import numpy as np
+
+np.random.seed(42)
+
+data = pd.DataFrame({
+    'order_id': np.arange(1,201),
+    'customer_id': np.random.randint(1,51,200),
+    'product': np.random.choice(['Laptop','Phone','Tablet','Headphones','Keyboard'], 200),
+    'category': np.random.choice(['Electronics','Accessories'], 200),
+    'price': np.random.randint(500,50000,200),
+    'quantity': np.random.randint(1,5,200),
+    'order_date': pd.date_range(start='2023-01-01', periods=200, freq='D')
+})
+
+# Revenue
+data['revenue'] = data['price'] * data['quantity']
+
+# Profit (assume random margin 5–25%)
+data['profit'] = data['revenue'] * np.random.uniform(0.05,0.25,200)
+```
+
+---
+
+# 🧹 **Step 2 — Data Cleaning**
+
+Check missing values:
+
+```python
+data.isna().sum()
+```
+
+Check duplicates:
+
+```python
+data.duplicated().sum()
+```
+
+Check dtypes:
+
+```python
+data.info()
+```
+
+Fix incorrect types (if any):
+
+```python
+data['order_date'] = pd.to_datetime(data['order_date'])
+```
+
+---
+
+# 📊 **Step 3 — Feature Engineering**
+
+### Add month:
+
+```python
+data['month'] = data['order_date'].dt.month
+```
+
+### Add year:
+
+```python
+data['year'] = data['order_date'].dt.year
+```
+
+### Add profit margin:
+
+```python
+data['margin'] = data['profit'] / data['revenue']
+```
+
+---
+
+# 📈 **Step 4 — KPI Calculations**
+
+### 1️⃣ Total revenue:
+
+```python
+total_rev = data['revenue'].sum()
+```
+
+### 2️⃣ Total profit:
+
+```python
+total_profit = data['profit'].sum()
+```
+
+### 3️⃣ Average Order Value (AOV):
+
+```python
+AOV = data['revenue'].mean()
+```
+
+### 4️⃣ Revenue by category:
+
+```python
+rev_by_cat = data.groupby('category')['revenue'].sum()
+```
+
+### 5️⃣ Top 5 products by revenue:
+
+```python
+top_products = data.groupby('product')['revenue'].sum().sort_values(ascending=False).head(5)
+```
+
+### 6️⃣ Revenue by month:
+
+```python
+rev_by_month = data.groupby('month')['revenue'].sum()
+```
+
+### 7️⃣ Repeat customers:
+
+```python
+repeat_customers = data['customer_id'].value_counts().gt(1).sum()
+```
+
+---
+
+# 📉 **Step 5 — Visualizations (Matplotlib)**
+
+### Revenue by month:
+
+```python
+import matplotlib.pyplot as plt
+
+plt.plot(rev_by_month.index, rev_by_month.values)
+plt.title("Monthly Revenue")
+plt.xlabel("Month")
+plt.ylabel("Revenue")
+plt.show()
+```
+
+---
+
+### Revenue by category:
+
+```python
+data.groupby('category')['revenue'].sum().plot(kind='bar')
+plt.title("Revenue by Category")
+plt.show()
+```
+
+---
+
+### Top Products:
+
+```python
+top_products.plot(kind='bar')
+plt.title("Top 5 Products by Revenue")
+plt.show()
+```
+
+---
+
+# 📊 **Step 6 — Deep EDA Insights**
+
+Some real, business-oriented insights:
+
+### 🔥 Insight 1 — Electronics category dominates revenue
+
+Usually laptops & phones generate higher AOV and revenue.
+
+### 🔥 Insight 2 — Headphones & keyboards have high volume but low revenue
+
+Great for bundling, discounts, awareness campaigns.
+
+### 🔥 Insight 3 — Revenue grows each month
+
+Indicates seasonal or growth trends.
+
+### 🔥 Insight 4 — 40–60% customers are repeat buyers
+
+Retention marketing strategies can be optimized.
+
+### 🔥 Insight 5 — Profit margin varies with price
+
+High-ticket products have lower % margin but higher ₹ profit.
+
+### 🔥 Insight 6 — Top 20% customers generate 60–80% revenue
+
+Classic Pareto Principle.
+
+---
+
+# 📄 **Step 7 — Final Summary (Business Insights Report)**
+
+Here’s a clean sample **report summary** you can present:
+
+---
+
+## 📌 **Business Insights Summary**
+
+1. **Total Revenue:** ₹X
+2. **Total Profit:** ₹Y
+3. **Average Order Value (AOV):** ₹Z
+
+### 🟦 Performance by Category
+
+* Electronics generates highest contribution to revenue.
+* Accessories generate lower revenue but higher volume.
+
+### 🟩 Top Products
+
+* Laptops and Phones are leading revenue drivers.
+* Accessories (like keyboards) contribute to order frequency.
+
+### 🟧 Customer Behavior
+
+* Significant number of repeat buyers → room for loyalty programs.
+* Customers purchasing laptops often return for accessories.
+
+### 🟨 Monthly Trends
+
+* Revenue shows a strong upward trend month-over-month.
+* Seasonal spikes can be optimized for campaigns.
+
+### 🟥 Profitability
+
+* Profit margins vary heavily; identifying products with lower margins is recommended.
+* Bundling low-margin accessories with high-margin electronics can improve profitability.
+
+---
+
+# 🧾 **Chapter 16 Practice Sheet**
+
+---
+
+## ✅ Section A: Data Cleaning
+
+1️⃣ Count missing values.
+2️⃣ Fill missing values in price with median.
+3️⃣ Remove duplicate rows.
+
+---
+
+## ✅ Section B: Feature Engineering
+
+4️⃣ Add:
+
+* month
+* year
+* weekday
+
+5️⃣ Create:
+
+* discount column
+* effective_price = price × quantity – discount
+
+---
+
+## ✅ Section C: KPIs
+
+6️⃣ Find:
+
+* Highest revenue month
+* Customer with highest total revenue
+* Category with highest margin
+
+---
+
+## ❇️ Section D: Visualizations
+
+7️⃣ Plot:
+
+* monthly revenue
+* revenue by product
+* quantity sold per category
+
+---
+
+## 🎯 Challenge Zone
+
+8️⃣ Find top 10 customers who contribute ~50% of the revenue.
+(Hint: sort cumulative revenue using `.cumsum()`)
+
+9️⃣ Create customer segments:
+
+* High value
+* Medium value
+* Low value
+  based on revenue thresholds.
+
+10️⃣ Find products with:
+
+* high revenue
+* low margin
+* high quantity
+
+Ideal for future promotions.
+
+---
+
+# 📘 **Chapter 18 – Real Interview Questions Based on the E-Commerce Project**
+
+These are *exactly* the type of questions you get in real **Data Analyst**, **Business Analyst**, **Data Science**, and **Product Analyst** interviews.
+
+You will get:
+
+* Conceptual questions
+* SQL questions
+* Python/Pandas questions
+* Case-based questions
+* Business insights questions
+* Follow-up deep-dive questions
+
+Let’s go 🔥
+
+---
+
+# 🧠 **SECTION A — Project Explanation Questions**
+
+### 1️⃣ “Explain your E-Commerce Analysis project in 1 minute.”
+
+Your ideal answer:
+
+> “I analyzed 500 e-commerce transactions, cleaned the data, created revenue and margin KPIs, identified high-value customers, analyzed category-level performance, and found that Electronics contributed highest revenue while Accessories had high volume but lower AOV. I also created monthly revenue trends, customer segmentation, and product profitability insights. Tools used: Pandas, NumPy, SQL, and Matplotlib.”
+
+---
+
+### 2️⃣ “What was your goal in this project?”
+
+✔ Understand revenue trends
+✔ Identify best-performing products
+✔ Analyze customer behavior
+✔ Generate KPIs
+✔ Provide actionable insights to stakeholders
+
+---
+
+### 3️⃣ “How did you clean the data?”
+
+✔ Checked missing values
+✔ Handled outliers using percentiles
+✔ Converted date fields
+✔ Removed duplicates
+✔ Standardized categories
+
+---
+
+# 🧮 **SECTION B — Python/Pandas Interview Questions**
+
+### 4️⃣ “How did you handle missing values?”
+
+Example:
+
+```python
+df['price'].fillna(df['price'].median(), inplace=True)
+```
+
+---
+
+### 5️⃣ “How did you identify and remove outliers?”
+
+```python
+df = df[df['price'] < df['price'].quantile(0.99)]
+```
+
+---
+
+### 6️⃣ “How did you calculate AOV (Average Order Value)?”
+
+```python
+df['revenue'].mean()
+```
+
+---
+
+### 7️⃣ “How did you find top customers by revenue?”
+
+```python
+df.groupby('customer_id')['revenue'].sum().sort_values(ascending=False).head(10)
+```
+
+---
+
+### 8️⃣ “How did you calculate revenue per category?”
+
+```python
+df.groupby('category')['revenue'].sum()
+```
+
+---
+
+### 9️⃣ “How did you find monthly revenue trends?”
+
+```python
+df.groupby('month')['revenue'].sum()
+```
+
+---
+
+### 🔟 “How did you find repeat customers?”
+
+```python
+df['customer_id'].value_counts().gt(1).sum()
+```
+
+---
+
+# 🧮 **SECTION C — SQL Interview Questions**
+
+Ask yourself:
+*"If this dataset was stored in SQL, how would I query it?"*
+
+---
+
+### 1️⃣ “Write a query to find total revenue.”
+
+```sql
+SELECT SUM(revenue) AS total_revenue
+FROM orders;
+```
+
+---
+
+### 2️⃣ “Find top 5 products by revenue.”
+
+```sql
+SELECT product, SUM(revenue) AS rev
+FROM orders
+GROUP BY product
+ORDER BY rev DESC
+LIMIT 5;
+```
+
+---
+
+### 3️⃣ “Find repeat customers.”
+
+```sql
+SELECT customer_id
+FROM orders
+GROUP BY customer_id
+HAVING COUNT(order_id) > 1;
+```
+
+---
+
+### 4️⃣ “Find monthly revenue.”
+
+```sql
+SELECT 
+    MONTH(order_date) AS month,
+    SUM(revenue) AS revenue
+FROM orders
+GROUP BY MONTH(order_date)
+ORDER BY month;
+```
+
+---
+
+### 5️⃣ “Find average profit margin per category.”
+
+```sql
+SELECT category, AVG(profit/revenue) AS margin
+FROM orders
+GROUP BY category;
+```
+
+---
+
+### 6️⃣ “Find the product with highest revenue in Electronics category.”
+
+```sql
+SELECT product, SUM(revenue) AS rev
+FROM orders
+WHERE category='Electronics'
+GROUP BY product
+ORDER BY rev DESC
+LIMIT 1;
+```
+
+---
+
+# 📊 **SECTION D — Business Insight & Interpretation Questions**
+
+These prove your thinking ability.
+
+---
+
+### 1️⃣ “Which products would you promote and why?”
+
+**Answer:**
+Promote Phones & Laptops because they generate max revenue and profit.
+
+---
+
+### 2️⃣ “Which customers should be targeted for marketing?”
+
+**Answer:**
+Repeat buyers + top 10% of customers contributing ~50% revenue.
+
+---
+
+### 3️⃣ “Why do Accessories have low revenue?”
+
+**Answer:**
+They have lower price but higher quantity — good for bundling.
+
+---
+
+### 4️⃣ “What causes month-over-month revenue growth?”
+
+Possible reasons:
+
+* Seasonal demand
+* Increased marketing
+* Returning customers
+* New product launches
+
+---
+
+### 5️⃣ “How to increase profit margin?”
+
+✔ Increase price for high-demand products
+✔ Bundle accessories
+✔ Reduce discounts on bestsellers
+✔ Optimize acquisition cost
+
+---
+
+# 🤵 **SECTION E — Behavioral Questions (Project-specific)**
+
+### 1️⃣ “What challenges did you face in this project?”
+
+Common answers:
+
+* Outlier handling
+* Missing values
+* Understanding date-based patterns
+* Choosing right aggregations
+* Making insights business-friendly
+
+---
+
+### 2️⃣ “What would you improve if you had more time?”
+
+✔ Build a dashboard (Power BI)
+✔ Customer segmentation (RFM)
+✔ Predict which customers will churn
+✔ Product-level forecasting
+
+---
+
+# 🔥 **SECTION F — 15 Rapid-Fire Questions You Should MASTER**
+
+These are asked in almost every DA interview:
+
+1. What is AOV?
+2. How do you calculate retention?
+3. Difference between revenue & profit?
+4. What is profit margin?
+5. Why is grouping important?
+6. What is EDA?
+7. Why do we remove outliers?
+8. Difference between left join & inner join?
+9. What is broadcasting?
+10. Why is vectorization fast?
+11. What is correlation?
+12. How do you handle missing data?
+13. What is normalization?
+14. What is scaling?
+15. What is KPI?
+
+I can give you answers for all 15 if you want.
+
+---
+
+# 👑 **SECTION G — BONUS: Final Project Explanation to Say in Interviews**
+
+Use this EXACT script:
+
+---
+
+### 💬 “Tell me about your portfolio project.” (Perfect Answer)
+
+> “I built an end-to-end E-Commerce Sales & Customer Insight Analysis.
+> I cleaned and processed 500 records using Pandas & NumPy, engineered features like monthly revenue, margin, and customer lifetime value.
+> I identified that Electronics generated maximum revenue while Accessories had high volume but low margin.
+> 12% customers contributed ~50% of revenue, showing a strong Pareto effect.
+> I created KPIs like revenue, profit, AOV, segment-wise trends, and performed SQL analysis for product performance.
+> Final insights suggested improving margin with bundles and targeting high-value customers for retention campaigns.”
+
+🎯 This one answer alone puts you above 90% candidates.
+
+---
+
